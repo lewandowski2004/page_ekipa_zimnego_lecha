@@ -1,0 +1,167 @@
+/* ─── RESET & BASE ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --orange:   #FF6B00;
+  --orange2:  #FF8C00;
+  --black:    #0D0D0D;
+  --dark:     #111111;
+  --dark2:    #1A1A1A;
+  --dark3:    #222222;
+  --gray:     #888888;
+  --light:    #F5F5F5;
+  --white:    #FFFFFF;
+  --font-h:   'Oswald', sans-serif;
+  --font-b:   'Inter', sans-serif;
+  --transition: .35s cubic-bezier(.4,0,.2,1);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-b);
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+
+/* ─── SCROLLBAR ─────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--dark); }
+::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+/* ─── UTILITY ───────────────────────────────────────────────────── */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+.section-label {
+  display: inline-block;
+  font-family: var(--font-h);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--orange);
+  margin-bottom: 12px;
+}
+
+/* ─── NAVIGATION ────────────────────────────────────────────────── */
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-logo-icon {
+  width: 44px; height: 44px;
+  background: var(--orange);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; flex-shrink: 0;
+}
+
+.nav-logo-text {
+  font-family: var(--font-h);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.nav-logo-text span { color: var(--orange); display: block; font-size: 11px; letter-spacing: 3px; font-weight: 400; }
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  font-family: var(--font-h);
+  font-size: 13px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--light);
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px; left: 0; right: 0;
+  height: 2px;
+  background: var(--orange);
+  transform: scaleX(0);
+  transition: transform var(--transition);
+}
+
+.nav-links a:hover { color: var(--orange); }
+.nav-links a:hover::after { transform: scaleX(1); }
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 8px;
+  background: none; border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 26px; height: 2px;
+  background: var(--white);
+  transition: var(--transition);
+}
+
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: var(--dark2);
+  padding: 24px;
+  gap: 16px;
+  border-top: 2px solid var(--orange);
+}
+
+.mobile-menu a {
+  font-family: var(--font-h);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--light);
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  transition: color var(--transition);
+}
+
+.mobile-menu a:hover { color: var(--orange); }
+.mobile-menu.open { display: flex; }
+
+/* ─── FADE IN ANIMATION ──────────────────────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
