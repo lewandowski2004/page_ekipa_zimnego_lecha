@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aktualności — Ekipa Zimnego Lecha</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/news.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <div class="nav-logo-icon">⚽</div>
+        <div class="nav-logo-text">
+          Ekipa Zimnego Lecha
+          <span>Amatorska Drużyna Piłkarska</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#news">Aktualności</a></li>
+        <li><a href="index.html#players">Zawodnicy</a></li>
+        <li><a href="index.html#schedule">Terminarz</a></li>
+        <li><a href="index.html#sponsors">Sponsorzy</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#news">Aktualności</a>
+      <a href="index.html#players">Zawodnicy</a>
+      <a href="index.html#schedule">Terminarz</a>
+      <a href="index.html#sponsors">Sponsorzy</a>
+      <a href="index.html#contact">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <div class="page-header-shape"></div>
+    <div class="container page-header-inner">
+      <div class="page-breadcrumb">
+        <a href="index.html">Strona główna</a> ›
+        <span>Aktualności</span>
+      </div>
+      <h1 class="page-title">Aktual<span>ności</span></h1>
+      <p class="page-subtitle">Najnowsze wieści z życia Ekipy Zimnego Lecha — mecze, turnieje, zmiany w drużynie i wszystko, co ważne.</p>
+    </div>
+  </header>
+
+  <!-- NEWS LISTING -->
+  <section class="news-listing">
+    <div class="container">
+      <div class="nl-grid" id="newsListingGrid">
+        <!-- wypełniane przez js/news.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 <span>Ekipa Zimnego Lecha</span>. Wszelkie prawa zastrzeżone.</p>
+        <a href="index.html" style="font-size:13px;color:var(--gray);">← Strona główna</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/news.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      this.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

@@ -246,6 +246,9 @@
   position: relative;
   transition: transform var(--transition);
   border: 1px solid rgba(255,255,255,.05);
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .news-card:hover { transform: translateY(-6px); }
@@ -317,7 +320,7 @@
   color: rgba(255,255,255,.6);
 }
 
-.news-side { display: flex; flex-direction: column; gap: 24px; }
+.news-side { display: flex; flex-direction: column; gap: 12px; }
 
 .news-mini {
   background: var(--dark2);
@@ -326,7 +329,11 @@
   display: flex;
   border: 1px solid rgba(255,255,255,.05);
   transition: transform var(--transition);
+  text-decoration: none;
+  color: inherit;
+  flex: 1;
 }
+
 
 .news-mini:hover { transform: translateX(6px); }
 

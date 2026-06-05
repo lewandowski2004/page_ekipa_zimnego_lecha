@@ -8,7 +8,7 @@ const SPONSORS = [
     nameHighlight: "Pro",
     tagline: "Kompleksowe usługi instalacyjne — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_instal_pro.jpg",
+    logo: "grafika/sponsorzy/company_logo_instal_pro.jpg",
     logoEmoji: "🔧",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -31,7 +31,7 @@ const SPONSORS = [
     nameHighlight: "Ubezpieczenia",
     tagline: "Twoje bezpieczeństwo w dobrych rękach — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_solidne_ubezpieczenia.jpg",
+    logo: "grafika/sponsorzy/company_logo_solidne_ubezpieczenia.jpg",
     logoEmoji: "🛡️",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -54,7 +54,7 @@ const SPONSORS = [
     nameHighlight: "Gaz",
     tagline: "Usługi gazowe na najwyższym poziomie — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_mon_gaz.jpg",
+    logo: "grafika/sponsorzy/company_logo_mon_gaz.jpg",
     logoEmoji: "🔥",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -77,7 +77,7 @@ const SPONSORS = [
     nameHighlight: "Traker",
     tagline: "Do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_traker.jpg",
+    logo: "grafika/sponsorzy/company_logo_traker.jpg",
     logoEmoji: "📡",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -100,7 +100,7 @@ const SPONSORS = [
     nameHighlight: "Gaz",
     tagline: "Profesjonalne usługi gazowe — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_mark_gaz.jpg",
+    logo: "grafika/sponsorzy/company_logo_mark_gaz.jpg",
     logoEmoji: "🔥",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -123,7 +123,7 @@ const SPONSORS = [
     nameHighlight: "Lewandowski",
     tagline: "Do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_tsh_lewandowski.jpg",
+    logo: "grafika/sponsorzy/company_logo_tsh_lewandowski.jpg",
     logoEmoji: "🏢",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -146,7 +146,7 @@ const SPONSORS = [
     nameHighlight: "Transport",
     tagline: "Niezawodny transport na każdą odległość — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_paradowski_transport.jpg",
+    logo: "grafika/sponsorzy/company_logo_paradowski_transport.jpg",
     logoEmoji: "🚛",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -169,7 +169,7 @@ const SPONSORS = [
     nameHighlight: "Przedpełce",
     tagline: "Tradycja i jakość od pokoleń — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_mlyn_przedpelce.jpg",
+    logo: "grafika/sponsorzy/company_logo_mlyn_przedpelce.jpg",
     logoEmoji: "🌾",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -192,7 +192,7 @@ const SPONSORS = [
     nameHighlight: "Ravi",
     tagline: "Muzyczna oprawa każdej imprezy — do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_dj_ravi.jpg",
+    logo: "grafika/sponsorzy/company_logo_dj_ravi.jpg",
     logoEmoji: "🎧",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
@@ -215,7 +215,7 @@ const SPONSORS = [
     nameHighlight: "Stolrys",
     tagline: "Do uzupełnienia",
     tier: "Sponsor",
-    logo: "grafika/company_logo/company_logo_stolrys.jpg",
+    logo: "grafika/sponsorzy/company_logo_stolrys.jpg",
     logoEmoji: "🪵",
     description: `<p>Opis firmy do uzupełnienia.</p>`,
     perks: [
