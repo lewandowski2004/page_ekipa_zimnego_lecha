@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ekipa Zimnego Lecha – Amatorska Drużyna Piłkarska</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── RESET & BASE ──────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --orange:   #FF6B00;
+      --orange2:  #FF8C00;
+      --black:    #0D0D0D;
+      --dark:     #111111;
+      --dark2:    #1A1A1A;
+      --dark3:    #222222;
+      --gray:     #888888;
+      --light:    #F5F5F5;
+      --white:    #FFFFFF;
+      --font-h:   'Oswald', sans-serif;
+      --font-b:   'Inter', sans-serif;
+      --transition: .35s cubic-bezier(.4,0,.2,1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    img { max-width: 100%; display: block; }
+
+    /* ─── SCROLLBAR ─────────────────────────────────────────────────── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: var(--orange); border-radius: 3px; }
+
+    /* ─── UTILITY ───────────────────────────────────────────────────── */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-h);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-family: var(--font-h);
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.05;
+      color: var(--white);
+    }
+
+    .section-title span { color: var(--orange); }
+
+    .btn {
+      display: inline-block;
+      font-family: var(--font-h);
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 14px 32px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+    }
+
+    .btn-primary {
+      background: var(--orange);
+      color: var(--white);
+      clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 100%, 12px 100%);
+    }
+    .btn-primary:hover { background: var(--orange2); transform: translateY(-2px); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--orange);
+      border: 2px solid var(--orange);
+    }
+    .btn-outline:hover { background: var(--orange); color: var(--white); }
+
+    /* ─── NAVIGATION ────────────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 24px;
+      transition: var(--transition);
+    }
+
+    .nav.scrolled {
+      background: rgba(13,13,13,.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 30px rgba(0,0,0,.5);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 72px;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .nav-logo-icon {
+      width: 44px; height: 44px;
+      background: var(--orange);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; flex-shrink: 0;
+    }
+
+    .nav-logo-text {
+      font-family: var(--font-h);
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    .nav-logo-text span { color: var(--orange); display: block; font-size: 11px; letter-spacing: 3px; font-weight: 400; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      font-family: var(--font-h);
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--light);
+      position: relative;
+      transition: color var(--transition);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0; right: 0;
+      height: 2px;
+      background: var(--orange);
+      transform: scaleX(0);
+      transition: transform var(--transition);
+    }
+
+    .nav-links a:hover { color: var(--orange); }
+    .nav-links a:hover::after { transform: scaleX(1); }
+
+    .nav-cta {
+      background: var(--orange);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      border-radius: 2px;
+      clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 100%, 8px 100%);
+    }
+
+    .nav-cta:hover { background: var(--orange2); }
+    .nav-cta::after { display: none !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none; border: none;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px; height: 2px;
+      background: var(--white);
+      transition: var(--transition);
+    }
+
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      flex-direction: column;
+      background: var(--dark2);
+      padding: 24px;
+      gap: 16px;
+      border-top: 2px solid var(--orange);
+    }
+
+    .mobile-menu a {
+      font-family: var(--font-h);
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--light);
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      transition: color var(--transition);
+    }
+
+    .mobile-menu a:hover { color: var(--orange); }
+    .mobile-menu.open { display: flex; }
+
+    /* ─── HERO ──────────────────────────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(135deg, rgba(255,107,0,.25) 0%, transparent 60%),
+        linear-gradient(to right, rgba(13,13,13,1) 30%, rgba(13,13,13,.3) 100%),
+        url('img/hero-bg.jpg') center/cover no-repeat;
+      background-color: var(--dark2);
+    }
+
+    /* Animated geometric shapes */
+    .hero-bg::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 70% 50%, rgba(255,107,0,.12) 0%, transparent 60%);
+    }
+
+    .hero-shapes {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .shape {
+      position: absolute;
+      background: var(--orange);
+      opacity: .06;
+    }
+
+    .shape-1 {
+      width: 500px; height: 500px;
+      right: -100px; top: -100px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      animation: rotate 25s linear infinite;
+    }
+
+    .shape-2 {
+      width: 200px; height: 200px;
+      right: 200px; bottom: 100px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      animation: rotate 18s linear infinite reverse;
+      opacity: .1;
+    }
+
+    .shape-3 {
+      width: 80px; height: 80px;
+      right: 450px; top: 200px;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      animation: rotate 12s linear infinite;
+      opacity: .15;
+    }
+
+    @keyframes rotate { to { transform: rotate(360deg); } }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      width: 100%;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-h);
+      font-size: 12px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 24px;
+    }
+
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 32px; height: 2px;
+      background: var(--orange);
+    }
+
+    .hero-title {
+      font-family: var(--font-h);
+      font-size: clamp(3rem, 9vw, 7rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: .95;
+      margin-bottom: 28px;
+    }
+
+    .hero-title .line-orange { color: var(--orange); display: block; }
+
+    .hero-desc {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,.7);
+      max-width: 520px;
+      margin-bottom: 44px;
+    }
+
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .hero-stats {
+      display: flex;
+      gap: 48px;
+      margin-top: 72px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      flex-wrap: wrap;
+    }
+
+    .stat-item { text-align: left; }
+
+    .stat-number {
+      font-family: var(--font-h);
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 4px;
+    }
+
+    /* ─── DIAGONAL DIVIDER ──────────────────────────────────────────── */
+    .divider-top {
+      height: 80px;
+      background: var(--dark2);
+      clip-path: polygon(0 0, 100% 60%, 100% 100%, 0 100%);
+      margin-top: -1px;
+    }
+
+    .divider-bottom {
+      height: 80px;
+      background: var(--black);
+      clip-path: polygon(0 0, 100% 0, 100% 40%, 0 100%);
+      margin-bottom: -1px;
+    }
+
+    /* ─── AKTUALNOŚCI ───────────────────────────────────────────────── */
+    .news {
+      background: var(--black);
+      padding: 100px 0;
+    }
+
+    .news-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 56px;
+      gap: 24px;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 24px;
+    }
+
+    .news-card {
+      background: var(--dark2);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      transition: transform var(--transition);
+      border: 1px solid rgba(255,255,255,.05);
+    }
+
+    .news-card:hover { transform: translateY(-6px); }
+
+    .news-card-image {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: var(--dark3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .news-card-image img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform .6s ease;
+    }
+
+    .news-card:hover .news-card-image img { transform: scale(1.05); }
+
+    .news-card-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: center; justify-content: center;
+      background: linear-gradient(135deg, var(--dark3), var(--dark2));
+      font-size: 48px;
+    }
+
+    .news-badge {
+      position: absolute;
+      top: 16px; left: 16px;
+      background: var(--orange);
+      font-family: var(--font-h);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      clip-path: polygon(0 0, calc(100% - 6px) 0, 100% 100%, 6px 100%);
+    }
+
+    .news-card-body { padding: 24px; }
+
+    .news-meta {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 12px;
+      font-size: 12px;
+      color: var(--gray);
+      letter-spacing: 1px;
+    }
+
+    .news-meta span { display: flex; align-items: center; gap: 5px; }
+
+    .news-card-title {
+      font-family: var(--font-h);
+      font-size: 1.4rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      transition: color var(--transition);
+    }
+
+    .news-card:hover .news-card-title { color: var(--orange); }
+
+    .news-card-excerpt {
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,.6);
+    }
+
+    .news-side { display: flex; flex-direction: column; gap: 24px; }
+
+    .news-mini {
+      background: var(--dark2);
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      border: 1px solid rgba(255,255,255,.05);
+      transition: transform var(--transition);
+    }
+
+    .news-mini:hover { transform: translateX(6px); }
+
+    .news-mini-image {
+      width: 100px;
+      flex-shrink: 0;
+      background: var(--dark3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px;
+    }
+
+    .news-mini-body { padding: 14px 16px; }
+
+    .news-mini-badge {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      font-family: var(--font-h);
+      margin-bottom: 6px;
+    }
+
+    .news-mini-title {
+      font-family: var(--font-h);
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .news-mini-date { font-size: 11px; color: var(--gray); }
+
+    /* ─── SPONSOR SLIDER ────────────────────────────────────────────── */
+    .sponsors {
+      background: var(--dark2);
+      padding: 80px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sponsors::before, .sponsors::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 120px;
+      z-index: 2;
+    }
+
+    .sponsors::before { left: 0; background: linear-gradient(to right, var(--dark2), transparent); }
+    .sponsors::after  { right: 0; background: linear-gradient(to left, var(--dark2), transparent); }
+
+    .sponsors-header { text-align: center; margin-bottom: 56px; }
+
+    .slider-wrapper { overflow: hidden; position: relative; }
+
+    .slider-track {
+      display: flex;
+      gap: 0;
+      animation: slide 22s linear infinite;
+      width: max-content;
+    }
+
+    .slider-track:hover { animation-play-state: paused; }
+
+    @keyframes slide {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .sponsor-slide {
+      flex-shrink: 0;
+      width: 220px;
+      height: 110px;
+      margin: 0 20px;
+      background: var(--dark3);
+      border: 1px solid rgba(255,255,255,.07);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color var(--transition), transform var(--transition);
+      cursor: pointer;
+      padding: 20px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .sponsor-slide:hover {
+      border-color: var(--orange);
+      transform: scale(1.04);
+    }
+
+    .sponsor-slide img {
+      max-width: 100%; max-height: 60px;
+      object-fit: contain;
+      filter: grayscale(1) brightness(1.4);
+      transition: filter var(--transition);
+    }
+
+    .sponsor-slide:hover img { filter: none; }
+
+    .sponsor-placeholder {
+      font-family: var(--font-h);
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      text-align: center;
+    }
+
+    /* featured sponsor */
+    .featured-sponsors {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 48px;
+      flex-wrap: wrap;
+    }
+
+    .featured-tag {
+      font-family: var(--font-h);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      border: 1px solid var(--orange);
+      padding: 3px 10px;
+      border-radius: 2px;
+    }
+
+    /* ─── ZAWODNICY ─────────────────────────────────────────────────── */
+    .players {
+      background: var(--black);
+      padding: 100px 0;
+    }
+
+    .players-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 56px;
+      gap: 24px;
+    }
+
+    .players-filter {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      font-family: var(--font-h);
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: 2px;
+      background: transparent;
+      color: var(--gray);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+      color: var(--white);
+    }
+
+    .players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .player-card {
+      background: var(--dark2);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      border: 1px solid rgba(255,255,255,.05);
+      transition: transform var(--transition), border-color var(--transition);
+      cursor: pointer;
+    }
+
+    .player-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--orange);
+    }
+
+    .player-image {
+      aspect-ratio: 3/4;
+      background: var(--dark3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .player-image img { width: 100%; height: 100%; object-fit: cover; }
+
+    .player-image-placeholder {
+      width: 100%; height: 100%;
+      display: flex; align-items: flex-end; justify-content: center;
+      background: linear-gradient(160deg, var(--dark3) 0%, rgba(255,107,0,.1) 100%);
+      padding-bottom: 16px;
+      font-size: 64px;
+    }
+
+    .player-number {
+      position: absolute;
+      top: 12px; right: 12px;
+      font-family: var(--font-h);
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.08);
+      line-height: 1;
+      user-select: none;
+    }
+
+    .player-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(13,13,13,.95) 0%, transparent 50%);
+      display: flex;
+      align-items: flex-end;
+      padding: 20px 16px;
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+
+    .player-card:hover .player-overlay { opacity: 1; }
+
+    .player-stats {
+      display: flex;
+      gap: 16px;
+    }
+
+    .player-stat {
+      text-align: center;
+    }
+
+    .player-stat-val {
+      font-family: var(--font-h);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--orange);
+    }
+
+    .player-stat-label {
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,.6);
+    }
+
+    .player-info { padding: 16px; }
+
+    .player-position {
+      font-family: var(--font-h);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 4px;
+    }
+
+    .player-name {
+      font-family: var(--font-h);
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    /* ─── TERMINARZ ─────────────────────────────────────────────────── */
+    .schedule {
+      background: var(--dark2);
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .schedule::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 4px; height: 100%;
+      background: linear-gradient(to bottom, var(--orange), transparent);
+    }
+
+    .schedule-header { margin-bottom: 56px; }
+
+    .schedule-tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 40px;
+      background: var(--dark3);
+      padding: 4px;
+      border-radius: 4px;
+      width: fit-content;
+    }
+
+    .tab-btn {
+      font-family: var(--font-h);
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 10px 24px;
+      border: none;
+      background: transparent;
+      color: var(--gray);
+      border-radius: 3px;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .tab-btn.active {
+      background: var(--orange);
+      color: var(--white);
+    }
+
+    .match-list { display: flex; flex-direction: column; gap: 4px; }
+
+    .match-item {
+      display: grid;
+      grid-template-columns: 120px 1fr auto 1fr auto;
+      align-items: center;
+      gap: 16px;
+      background: var(--dark3);
+      padding: 20px 24px;
+      border-radius: 4px;
+      border-left: 3px solid transparent;
+      transition: border-color var(--transition), transform var(--transition);
+    }
+
+    .match-item:hover {
+      border-left-color: var(--orange);
+      transform: translateX(4px);
+    }
+
+    .match-item.upcoming { border-left-color: rgba(255,107,0,.3); }
+    .match-item.completed { opacity: .75; }
+
+    .match-date-block { text-align: center; }
+
+    .match-day {
+      font-family: var(--font-h);
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--orange);
+      line-height: 1;
+    }
+
+    .match-month {
+      font-family: var(--font-h);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+    }
+
+    .match-team {
+      font-family: var(--font-h);
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+
+    .match-team.home { text-align: right; }
+
+    .match-score-box {
+      text-align: center;
+      background: var(--dark2);
+      padding: 10px 18px;
+      border-radius: 4px;
+      min-width: 90px;
+    }
+
+    .match-score {
+      font-family: var(--font-h);
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: var(--white);
+    }
+
+    .match-score-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+    }
+
+    .match-vs { font-family: var(--font-h); font-size: .9rem; color: var(--gray); }
+
+    .match-type-badge {
+      font-family: var(--font-h);
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 2px;
+      background: rgba(255,107,0,.15);
+      color: var(--orange);
+      white-space: nowrap;
+    }
+
+    .match-type-badge.friendly { background: rgba(255,255,255,.08); color: var(--gray); }
+
+    /* ─── FORMULARZE ─────────────────────────────────────────────────── */
+    .forms-section {
+      background: var(--black);
+      padding: 100px 0;
+    }
+
+    .forms-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .form-card {
+      background: var(--dark2);
+      border-radius: 4px;
+      padding: 48px 40px;
+      border-top: 3px solid var(--orange);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .form-card::before {
+      content: '';
+      position: absolute;
+      bottom: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: var(--orange);
+      opacity: .03;
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .form-icon {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+
+    .form-title {
+      font-family: var(--font-h);
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .form-desc {
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 32px;
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-h);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-bottom: 8px;
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      background: var(--dark3);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 3px;
+      padding: 13px 16px;
+      color: var(--white);
+      font-family: var(--font-b);
+      font-size: 14px;
+      transition: border-color var(--transition);
+      outline: none;
+      -webkit-appearance: none;
+    }
+
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus { border-color: var(--orange); }
+
+    .form-select option { background: var(--dark3); }
+
+    .form-textarea { resize: vertical; min-height: 100px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-submit { margin-top: 8px; width: 100%; text-align: center; }
+
+    .success-msg {
+      display: none;
+      background: rgba(255,107,0,.1);
+      border: 1px solid var(--orange);
+      border-radius: 3px;
+      padding: 14px 20px;
+      font-family: var(--font-h);
+      font-size: 13px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-top: 16px;
+      text-align: center;
+    }
+
+    /* ─── FOOTER ─────────────────────────────────────────────────────── */
+    .footer {
+      background: var(--dark2);
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 72px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 48px;
+      padding-bottom: 56px;
+    }
+
+    .footer-brand { }
+
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo-icon {
+      width: 48px; height: 48px;
+      background: var(--orange);
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
+    }
+
+    .footer-desc {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--gray);
+      margin-bottom: 24px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+
+    .social-link {
+      width: 38px; height: 38px;
+      background: var(--dark3);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 3px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 16px;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--orange);
+      border-color: var(--orange);
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-h);
+      font-size: 13px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+    }
+
+    .footer-col ul { display: flex; flex-direction: column; gap: 10px; }
+
+    .footer-col ul a {
+      font-size: 14px;
+      color: var(--gray);
+      transition: color var(--transition);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-col ul a::before {
+      content: '›';
+      color: var(--orange);
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    .footer-col ul a:hover { color: var(--orange); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.06);
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .footer-bottom p {
+      font-size: 13px;
+      color: var(--gray);
+    }
+
+    .footer-bottom span { color: var(--orange); }
+
+    /* ─── SCROLL TO TOP ──────────────────────────────────────────────── */
+    .scroll-top {
+      position: fixed;
+      bottom: 32px; right: 32px;
+      width: 46px; height: 46px;
+      background: var(--orange);
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover { background: var(--orange2); }
+
+    /* ─── SECTION DIVIDERS ───────────────────────────────────────────── */
+    .angled-top {
+      clip-path: polygon(0 40px, 100% 0, 100% 100%, 0 100%);
+      margin-top: -40px;
+      padding-top: 140px !important;
+    }
+
+    /* ─── FADE IN ANIMATION ──────────────────────────────────────────── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity .7s ease, transform .7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .news-grid { grid-template-columns: 1fr; }
+      .news-side { flex-direction: row; }
+      .news-mini { flex: 1; }
+      .forms-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero-stats { gap: 32px; }
+      .stat-number { font-size: 2.2rem; }
+      .match-item { grid-template-columns: 80px 1fr; gap: 12px; }
+      .match-team.home { display: none; }
+      .match-score-box { display: none; }
+      .match-type-badge { display: none; }
+      .news-side { flex-direction: column; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero-actions { flex-direction: column; }
+      .btn { width: 100%; text-align: center; }
+      .players-grid { grid-template-columns: repeat(2, 1fr); }
+      .forms-section .form-card { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAWIGACJA ═══════════════════════════════════════════════════ -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="#home" class="nav-logo">
+        <div class="nav-logo-icon">⚽</div>
+        <div class="nav-logo-text">
+          Ekipa Zimnego Lecha
+          <span>Amatorska Drużyna Piłkarska</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#news">Aktualności</a></li>
+        <li><a href="#players">Zawodnicy</a></li>
+        <li><a href="#schedule">Terminarz</a></li>
+        <li><a href="#sponsors">Sponsorzy</a></li>
+        <li><a href="#contact" class="nav-cta">Kontakt</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#news" class="mobile-link">Aktualności</a>
+      <a href="#players" class="mobile-link">Zawodnicy</a>
+      <a href="#schedule" class="mobile-link">Terminarz</a>
+      <a href="#sponsors" class="mobile-link">Sponsorzy</a>
+      <a href="#contact" class="mobile-link">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ════════════════════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg"></div>
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">Amatorska Drużyna Piłkarska · Założona 2018</div>
+
+      <h1 class="hero-title">
+        Ekipa
+        <span class="line-orange">Zimnego Lecha</span>
+      </h1>
+
+      <p class="hero-desc">
+        Połączeni pasją do futbolu. Gramy sercem, wygrywamy razem.
+        Zapraszamy do świata amatorskiej piłki nożnej na najwyższym poziomie zaangażowania.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#news" class="btn btn-primary">Najnowsze aktualności</a>
+        <a href="#players" class="btn btn-outline">Poznaj drużynę</a>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">24</div>
+          <div class="stat-label">Zawodnicy</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">6</div>
+          <div class="stat-label">Lat razem</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">120+</div>
+          <div class="stat-label">Rozegranych meczy</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">8</div>
+          <div class="stat-label">Sponsorów</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ AKTUALNOŚCI ══════════════════════════════════════════════════ -->
+  <section class="news" id="news">
+    <div class="container">
+      <div class="news-header fade-in">
+        <div>
+          <span class="section-label">Z życia drużyny</span>
+          <h2 class="section-title">Aktual<span>ności</span></h2>
+        </div>
+        <a href="#" class="btn btn-outline">Wszystkie wpisy</a>
+      </div>
+
+      <div class="news-grid fade-in">
+        <!-- Główny artykuł -->
+        <div class="news-card">
+          <div class="news-card-image">
+            <div class="news-card-placeholder">🏆</div>
+            <span class="news-badge">Wyróżnione</span>
+          </div>
+          <div class="news-card-body">
+            <div class="news-meta">
+              <span>📅 15 maja 2026</span>
+              <span>✍️ Kapitan</span>
+            </div>
+            <h3 class="news-card-title">Zwycięstwo w turnieju wiosny — 3:1 z Dynamo Południe!</h3>
+            <p class="news-card-excerpt">
+              Niesamowite emocje podczas tegorocznego turnieju. Ekipa zaprezentowała znakomitą grę zespołową i pokonała faworyta rozgrywek. Wszystkie szczegóły i zdjęcia wkrótce...
+            </p>
+          </div>
+        </div>
+
+        <!-- Boczne artykuły -->
+        <div class="news-side">
+          <div class="news-mini">
+            <div class="news-mini-image">⚽</div>
+            <div class="news-mini-body">
+              <div class="news-mini-badge">Spar / Mecz</div>
+              <div class="news-mini-title">Spar z FC Kolejarz — remis 2:2</div>
+              <div class="news-mini-date">📅 8 maja 2026</div>
+            </div>
+          </div>
+
+          <div class="news-mini">
+            <div class="news-mini-image">🎽</div>
+            <div class="news-mini-body">
+              <div class="news-mini-badge">Drużyna</div>
+              <div class="news-mini-title">Nowe stroje dla całej ekipy — danke sponsor!</div>
+              <div class="news-mini-date">📅 2 maja 2026</div>
+            </div>
+          </div>
+
+          <div class="news-mini">
+            <div class="news-mini-image">📸</div>
+            <div class="news-mini-body">
+              <div class="news-mini-badge">Galeria</div>
+              <div class="news-mini-title">Zdjęcia z integracji po sezonie zimowym</div>
+              <div class="news-mini-date">📅 22 kwietnia 2026</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SLIDER SPONSORÓW ═════════════════════════════════════════════ -->
+  <section class="sponsors" id="sponsors">
+    <div class="container">
+      <div class="sponsors-header fade-in">
+        <span class="section-label">Partnerzy drużyny</span>
+        <h2 class="section-title">Nasi <span>Sponsorzy</span></h2>
+      </div>
+    </div>
+
+    <div class="slider-wrapper">
+      <div class="slider-track" id="sliderTrack">
+        <a href="sponsor.html?id=1" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 1</div></a>
+        <a href="sponsor.html?id=2" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 2</div></a>
+        <a href="sponsor.html?id=3" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 3</div></a>
+        <a href="sponsor.html?id=4" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 4</div></a>
+        <a href="sponsor.html?id=5" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 5</div></a>
+        <a href="sponsor.html?id=6" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 6</div></a>
+        <a href="sponsor.html?id=7" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 7</div></a>
+        <a href="sponsor.html?id=8" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 8</div></a>
+        <!-- Duplikat dla seamless loop -->
+        <a href="sponsor.html?id=1" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 1</div></a>
+        <a href="sponsor.html?id=2" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 2</div></a>
+        <a href="sponsor.html?id=3" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 3</div></a>
+        <a href="sponsor.html?id=4" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 4</div></a>
+        <a href="sponsor.html?id=5" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 5</div></a>
+        <a href="sponsor.html?id=6" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 6</div></a>
+        <a href="sponsor.html?id=7" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 7</div></a>
+        <a href="sponsor.html?id=8" class="sponsor-slide"><div class="sponsor-placeholder">SPONSOR 8</div></a>
+      </div>
+    </div>
+
+    <div class="container" style="margin-top:48px; text-align:center;">
+      <a href="#contact" class="btn btn-outline">Zostań sponsorem</a>
+    </div>
+  </section>
+
+  <!-- ═══ ZAWODNICY ════════════════════════════════════════════════════ -->
+  <section class="players angled-top" id="players">
+    <div class="container">
+      <div class="players-header fade-in">
+        <div>
+          <span class="section-label">Ekipa</span>
+          <h2 class="section-title">Nasi <span>Zawodnicy</span></h2>
+        </div>
+      </div>
+
+      <div class="players-filter fade-in">
+        <button class="filter-btn active" data-filter="all">Wszyscy</button>
+        <button class="filter-btn" data-filter="bramkarz">Bramkarze</button>
+        <button class="filter-btn" data-filter="obrona">Obrona</button>
+        <button class="filter-btn" data-filter="pomoc">Pomocnicy</button>
+        <button class="filter-btn" data-filter="atak">Napastnicy</button>
+        <button class="filter-btn" data-filter="sztab">Sztab</button>
+      </div>
+
+      <div class="players-grid fade-in">
+        <!-- Przykładowe karty zawodników (placeholder) -->
+        <div class="player-card" data-category="bramkarz">
+          <div class="player-image">
+            <div class="player-image-placeholder">🧤</div>
+            <div class="player-number">1</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">18</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">12</div>
+                  <div class="player-stat-label">Czyste konto</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Bramkarz</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="obrona">
+          <div class="player-image">
+            <div class="player-image-placeholder">🛡️</div>
+            <div class="player-number">4</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">22</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">3</div>
+                  <div class="player-stat-label">Bramki</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Obrońca</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="obrona">
+          <div class="player-image">
+            <div class="player-image-placeholder">🛡️</div>
+            <div class="player-number">5</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">20</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">1</div>
+                  <div class="player-stat-label">Bramki</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Obrońca</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="pomoc">
+          <div class="player-image">
+            <div class="player-image-placeholder">⚙️</div>
+            <div class="player-number">8</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">24</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">7</div>
+                  <div class="player-stat-label">Asysty</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Pomocnik</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="pomoc">
+          <div class="player-image">
+            <div class="player-image-placeholder">⚙️</div>
+            <div class="player-number">10</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">21</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">11</div>
+                  <div class="player-stat-label">Asysty</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Pomocnik</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="atak">
+          <div class="player-image">
+            <div class="player-image-placeholder">⚡</div>
+            <div class="player-number">9</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">23</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">18</div>
+                  <div class="player-stat-label">Bramki</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Napastnik</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="atak">
+          <div class="player-image">
+            <div class="player-image-placeholder">⚡</div>
+            <div class="player-number">11</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">19</div>
+                  <div class="player-stat-label">Mecze</div>
+                </div>
+                <div class="player-stat">
+                  <div class="player-stat-val">9</div>
+                  <div class="player-stat-label">Bramki</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Napastnik</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+
+        <div class="player-card" data-category="sztab">
+          <div class="player-image">
+            <div class="player-image-placeholder">📋</div>
+            <div class="player-number">—</div>
+            <div class="player-overlay">
+              <div class="player-stats">
+                <div class="player-stat">
+                  <div class="player-stat-val">6</div>
+                  <div class="player-stat-label">Lat w ekipie</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="player-info">
+            <div class="player-position">Trener</div>
+            <div class="player-name">Imię Nazwisko</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TERMINARZ ════════════════════════════════════════════════════ -->
+  <section class="schedule" id="schedule">
+    <div class="container">
+      <div class="schedule-header fade-in">
+        <span class="section-label">Kalendarz</span>
+        <h2 class="section-title">Terminarz <span>Meczy</span></h2>
+      </div>
+
+      <div class="schedule-tabs fade-in">
+        <button class="tab-btn active" data-tab="upcoming">Nadchodzące</button>
+        <button class="tab-btn" data-tab="past">Wyniki</button>
+      </div>
+
+      <!-- Nadchodzące -->
+      <div class="match-list" id="tab-upcoming">
+        <div class="match-item upcoming fade-in">
+          <div class="match-date-block">
+            <div class="match-day">14</div>
+            <div class="match-month">Cze 2026</div>
+          </div>
+          <div class="match-team home">Ekipa Zimnego Lecha</div>
+          <div class="match-score-box">
+            <div class="match-score">vs</div>
+            <div class="match-score-label">18:00</div>
+          </div>
+          <div class="match-team">FC Błyskawica</div>
+          <span class="match-type-badge">Liga</span>
+        </div>
+
+        <div class="match-item upcoming fade-in">
+          <div class="match-date-block">
+            <div class="match-day">21</div>
+            <div class="match-month">Cze 2026</div>
+          </div>
+          <div class="match-team home">Ekipa Zimnego Lecha</div>
+          <div class="match-score-box">
+            <div class="match-score">vs</div>
+            <div class="match-score-label">17:00</div>
+          </div>
+          <div class="match-team">Orły Północy</div>
+          <span class="match-type-badge friendly">Spar</span>
+        </div>
+
+        <div class="match-item upcoming fade-in">
+          <div class="match-date-block">
+            <div class="match-day">28</div>
+            <div class="match-month">Cze 2026</div>
+          </div>
+          <div class="match-team home">Ekipa Zimnego Lecha</div>
+          <div class="match-score-box">
+            <div class="match-score">vs</div>
+            <div class="match-score-label">15:30</div>
+          </div>
+          <div class="match-team">Turniej Letni</div>
+          <span class="match-type-badge">Turniej</span>
+        </div>
+      </div>
+
+      <!-- Wyniki -->
+      <div class="match-list" id="tab-past" style="display:none;">
+        <div class="match-item completed fade-in">
+          <div class="match-date-block">
+            <div class="match-day">15</div>
+            <div class="match-month">Maj 2026</div>
+          </div>
+          <div class="match-team home">Ekipa Zimnego Lecha</div>
+          <div class="match-score-box">
+            <div class="match-score">3 : 1</div>
+            <div class="match-score-label">Wygrana</div>
+          </div>
+          <div class="match-team">Dynamo Południe</div>
+          <span class="match-type-badge">Liga</span>
+        </div>
+
+        <div class="match-item completed fade-in">
+          <div class="match-date-block">
+            <div class="match-day">8</div>
+            <div class="match-month">Maj 2026</div>
+          </div>
+          <div class="match-team home">FC Kolejarz</div>
+          <div class="match-score-box">
+            <div class="match-score">2 : 2</div>
+            <div class="match-score-label">Remis</div>
+          </div>
+          <div class="match-team">Ekipa Zimnego Lecha</div>
+          <span class="match-type-badge friendly">Spar</span>
+        </div>
+
+        <div class="match-item completed fade-in">
+          <div class="match-date-block">
+            <div class="match-day">28</div>
+            <div class="match-month">Kwi 2026</div>
+          </div>
+          <div class="match-team home">Ekipa Zimnego Lecha</div>
+          <div class="match-score-box">
+            <div class="match-score">4 : 0</div>
+            <div class="match-score-label">Wygrana</div>
+          </div>
+          <div class="match-team">Huragan Wschód</div>
+          <span class="match-type-badge">Liga</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FORMULARZE ═══════════════════════════════════════════════════ -->
+  <section class="forms-section" id="contact">
+    <div class="container">
+      <div class="fade-in" style="text-align:center; margin-bottom:64px;">
+        <span class="section-label">Dołącz do nas</span>
+        <h2 class="section-title">Współ<span>praca</span></h2>
+        <p style="color:var(--gray);font-size:15px;max-width:540px;margin:16px auto 0;">
+          Jesteś zainteresowany sponsoringiem lub chcesz zagrać z nami sparing? Napisz do nas!
+        </p>
+      </div>
+
+      <div class="forms-grid">
+
+        <!-- Formularz sponsorski -->
+        <div class="form-card fade-in">
+          <div class="form-icon">🤝</div>
+          <h3 class="form-title">Zostań Sponsorem</h3>
+          <p class="form-desc">
+            Zainteresowany współpracą z Ekipą Zimnego Lecha? Wypełnij formularz i skontaktujemy się z Tobą w ciągu 48h.
+          </p>
+          <form id="sponsorForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="sp-name">Imię i nazwisko</label>
+                <input class="form-input" id="sp-name" type="text" placeholder="Jan Kowalski" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="sp-company">Firma</label>
+                <input class="form-input" id="sp-company" type="text" placeholder="Nazwa firmy" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sp-email">Adres e-mail</label>
+              <input class="form-input" id="sp-email" type="email" placeholder="kontakt@firma.pl" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sp-phone">Telefon</label>
+              <input class="form-input" id="sp-phone" type="tel" placeholder="+48 000 000 000" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sp-budget">Budżet sponsorski</label>
+              <select class="form-select" id="sp-budget">
+                <option value="">-- Wybierz przedział --</option>
+                <option>Do 1 000 zł</option>
+                <option>1 000 – 5 000 zł</option>
+                <option>5 000 – 10 000 zł</option>
+                <option>Powyżej 10 000 zł</option>
+                <option>Do uzgodnienia</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sp-msg">Wiadomość</label>
+              <textarea class="form-textarea" id="sp-msg" placeholder="Opisz co oferujesz i czego oczekujesz w zamian..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary" style="width:100%;">Wyślij zapytanie</button>
+            </div>
+            <div class="success-msg" id="sponsorSuccess">✓ Wiadomość wysłana! Wrócimy do Ciebie wkrótce.</div>
+          </form>
+        </div>
+
+        <!-- Formularz sparing -->
+        <div class="form-card fade-in">
+          <div class="form-icon">⚽</div>
+          <h3 class="form-title">Zaproponuj Sparing</h3>
+          <p class="form-desc">
+            Chcesz zagrać z nami sparing? Zgłoś swoją drużynę — wybierzemy termin i lokalizację, która pasuje obu stronom.
+          </p>
+          <form id="sparringForm">
+            <div class="form-group">
+              <label class="form-label" for="sr-team">Nazwa drużyny</label>
+              <input class="form-input" id="sr-team" type="text" placeholder="Nazwa Waszej drużyny" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sr-contact">Osoba kontaktowa</label>
+              <input class="form-input" id="sr-contact" type="text" placeholder="Imię i nazwisko kapitan" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label" for="sr-email">E-mail</label>
+                <input class="form-input" id="sr-email" type="email" placeholder="kapitan@druzyna.pl" required />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="sr-phone">Telefon</label>
+                <input class="form-input" id="sr-phone" type="tel" placeholder="+48 000 000 000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sr-players">Liczba zawodników</label>
+              <select class="form-select" id="sr-players">
+                <option value="">-- Format meczu --</option>
+                <option>5v5</option>
+                <option>7v7</option>
+                <option>8v8</option>
+                <option>11v11</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sr-date">Preferowany termin</label>
+              <input class="form-input" id="sr-date" type="date" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sr-msg">Dodatkowe informacje</label>
+              <textarea class="form-textarea" id="sr-msg" placeholder="Lokalizacja, poziom gry, uwagi..."></textarea>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary" style="width:100%;">Zgłoś sparing</button>
+            </div>
+            <div class="success-msg" id="sparringSuccess">✓ Zgłoszenie przyjęte! Skontaktujemy się wkrótce.</div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <div class="footer-logo-icon">⚽</div>
+            <div class="nav-logo-text">
+              Ekipa Zimnego Lecha
+              <span>Amatorska Drużyna Piłkarska</span>
+            </div>
+          </div>
+          <p class="footer-desc">
+            Połączeni pasją do futbolu. Razem od 2018 roku. Gramy dla zabawy, rywalizujemy z sercem i zawsze świętujemy jako jedna ekipa.
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Facebook">f</a>
+            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+            <a href="#" class="social-link" aria-label="TikTok">♪</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Nawigacja</h4>
+          <ul>
+            <li><a href="#news">Aktualności</a></li>
+            <li><a href="#players">Zawodnicy</a></li>
+            <li><a href="#schedule">Terminarz</a></li>
+            <li><a href="#sponsors">Sponsorzy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Ekipa</h4>
+          <ul>
+            <li><a href="#players">Skład drużyny</a></li>
+            <li><a href="#players">Sztab szkoleniowy</a></li>
+            <li><a href="#news">Galeria</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Kontakt</h4>
+          <ul>
+            <li><a href="mailto:kontakt@ekipazimnegoLecha.pl">📧 kontakt@ekipa.pl</a></li>
+            <li><a href="#contact">🤝 Zostań sponsorem</a></li>
+            <li><a href="#contact">⚽ Zaproponuj sparing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 <span>Ekipa Zimnego Lecha</span>. Wszelkie prawa zastrzeżone.</p>
+        <p>Zrobione z ❤️ dla futbolu</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top" id="scrollTop" aria-label="Wróć na górę">↑</button>
+
+  <!-- ═══ JAVASCRIPT ════════════════════════════════════════════════════ -->
+  <script>
+    // ── NAV SCROLL ──────────────────────────────────────────────────────
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+      document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
+    });
+
+    // ── HAMBURGER ───────────────────────────────────────────────────────
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // ── SCROLL TO TOP ───────────────────────────────────────────────────
+    document.getElementById('scrollTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // ── FADE IN ON SCROLL ───────────────────────────────────────────────
+    const fadeEls = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (e.isIntersecting) {
+          setTimeout(() => e.target.classList.add('visible'), i * 80);
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    fadeEls.forEach(el => observer.observe(el));
+
+    // ── PLAYER FILTER ───────────────────────────────────────────────────
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.player-card').forEach(card => {
+          const show = filter === 'all' || card.dataset.category === filter;
+          card.style.display = show ? '' : 'none';
+        });
+      });
+    });
+
+    // ── SCHEDULE TABS ───────────────────────────────────────────────────
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+
+        document.getElementById('tab-upcoming').style.display = 'none';
+        document.getElementById('tab-past').style.display = 'none';
+        document.getElementById('tab-' + this.dataset.tab).style.display = 'flex';
+        document.getElementById('tab-' + this.dataset.tab).style.flexDirection = 'column';
+      });
+    });
+
+    // ── FORM SUBMIT ──────────────────────────────────────────────────────
+    function setupForm(formId, successId) {
+      document.getElementById(formId).addEventListener('submit', function (e) {
+        e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        btn.textContent = 'Wysyłanie…';
+        btn.disabled = true;
+
+        setTimeout(() => {
+          this.reset();
+          btn.textContent = 'Wyślij zapytanie';
+          btn.disabled = false;
+          const success = document.getElementById(successId);
+          success.style.display = 'block';
+          setTimeout(() => { success.style.display = 'none'; }, 5000);
+        }, 1200);
+      });
+    }
+
+    setupForm('sponsorForm', 'sponsorSuccess');
+    setupForm('sparringForm', 'sparringSuccess');
+
+    // Fix sparring button text
+    document.querySelector('#sparringForm button[type="submit"]').textContent = 'Zgłoś sparing';
+    document.getElementById('sparringForm').addEventListener('submit', function(e) {
+      const btn = this.querySelector('button[type="submit"]');
+      setTimeout(() => { btn.textContent = 'Zgłoś sparing'; }, 1300);
+    });
+  </script>
+
+</body>
+</html>
