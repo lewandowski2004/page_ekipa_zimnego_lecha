@@ -15,7 +15,7 @@
   <nav class="nav" id="mainNav">
     <div class="nav-inner">
       <a href="#home" class="nav-logo">
-        <div class="nav-logo-icon">⚽</div>
+        <img src="grafika/ekipa/logo_ekipa_zimnego_lecha.png" alt="Ekipa Zimnego Lecha" class="nav-logo-icon" />
         <div class="nav-logo-text">
           Ekipa Zimnego Lecha
           <span>Amatorska Drużyna Piłkarska</span>
@@ -73,16 +73,15 @@
 
       <div class="hero-stats">
         <div class="stat-item">
-          <div class="stat-number">24</div>
+          <div class="stat-number">24</div>   <!-- liczba zawodników -->
           <div class="stat-label">Zawodnicy</div>
         </div>
         <div class="stat-item">
-          <div class="stat-number">6</div>
-          <div class="stat-label">Lat razem</div>
+          <div class="stat-number">3</div>    <!-- lata razem -->
+          <div class="stat-label">Lata razem</div>
         </div>
-
         <div class="stat-item">
-          <div class="stat-number">8</div>
+          <div class="stat-number">10</div>   <!-- liczba sponsorów -->
           <div class="stat-label">Sponsorów</div>
         </div>
       </div>
@@ -286,108 +285,14 @@
     </div>
   </section>
 
-  <!-- ═══ TERMINARZ ════════════════════════════════════════════════════ -->
+  <!-- ═══ HARMONOGRAM WYDARZEŃ ═════════════════════════════════════════ -->
   <section class="schedule" id="schedule">
     <div class="container">
       <div class="schedule-header fade-in">
         <span class="section-label">Kalendarz</span>
-        <h2 class="section-title">Terminarz <span>Meczy</span></h2>
+        <h2 class="section-title">Harmonogram <span>Wydarzeń</span></h2>
       </div>
-
-      <div class="schedule-tabs fade-in">
-        <button class="tab-btn active" data-tab="upcoming">Nadchodzące</button>
-        <button class="tab-btn" data-tab="past">Wyniki</button>
-      </div>
-
-      <!-- Nadchodzące -->
-      <div class="match-list" id="tab-upcoming">
-        <div class="match-item upcoming fade-in">
-          <div class="match-date-block">
-            <div class="match-day">14</div>
-            <div class="match-month">Cze 2026</div>
-          </div>
-          <div class="match-team home">Ekipa Zimnego Lecha</div>
-          <div class="match-score-box">
-            <div class="match-score">vs</div>
-            <div class="match-score-label">18:00</div>
-          </div>
-          <div class="match-team">FC Błyskawica</div>
-          <span class="match-type-badge">Liga</span>
-        </div>
-
-        <div class="match-item upcoming fade-in">
-          <div class="match-date-block">
-            <div class="match-day">21</div>
-            <div class="match-month">Cze 2026</div>
-          </div>
-          <div class="match-team home">Ekipa Zimnego Lecha</div>
-          <div class="match-score-box">
-            <div class="match-score">vs</div>
-            <div class="match-score-label">17:00</div>
-          </div>
-          <div class="match-team">Orły Północy</div>
-          <span class="match-type-badge friendly">Spar</span>
-        </div>
-
-        <div class="match-item upcoming fade-in">
-          <div class="match-date-block">
-            <div class="match-day">28</div>
-            <div class="match-month">Cze 2026</div>
-          </div>
-          <div class="match-team home">Ekipa Zimnego Lecha</div>
-          <div class="match-score-box">
-            <div class="match-score">vs</div>
-            <div class="match-score-label">15:30</div>
-          </div>
-          <div class="match-team">Turniej Letni</div>
-          <span class="match-type-badge">Turniej</span>
-        </div>
-      </div>
-
-      <!-- Wyniki -->
-      <div class="match-list" id="tab-past" style="display:none;">
-        <div class="match-item completed fade-in">
-          <div class="match-date-block">
-            <div class="match-day">15</div>
-            <div class="match-month">Maj 2026</div>
-          </div>
-          <div class="match-team home">Ekipa Zimnego Lecha</div>
-          <div class="match-score-box">
-            <div class="match-score">3 : 1</div>
-            <div class="match-score-label">Wygrana</div>
-          </div>
-          <div class="match-team">Dynamo Południe</div>
-          <span class="match-type-badge">Liga</span>
-        </div>
-
-        <div class="match-item completed fade-in">
-          <div class="match-date-block">
-            <div class="match-day">8</div>
-            <div class="match-month">Maj 2026</div>
-          </div>
-          <div class="match-team home">FC Kolejarz</div>
-          <div class="match-score-box">
-            <div class="match-score">2 : 2</div>
-            <div class="match-score-label">Remis</div>
-          </div>
-          <div class="match-team">Ekipa Zimnego Lecha</div>
-          <span class="match-type-badge friendly">Spar</span>
-        </div>
-
-        <div class="match-item completed fade-in">
-          <div class="match-date-block">
-            <div class="match-day">28</div>
-            <div class="match-month">Kwi 2026</div>
-          </div>
-          <div class="match-team home">Ekipa Zimnego Lecha</div>
-          <div class="match-score-box">
-            <div class="match-score">4 : 0</div>
-            <div class="match-score-label">Wygrana</div>
-          </div>
-          <div class="match-team">Huragan Wschód</div>
-          <span class="match-type-badge">Liga</span>
-        </div>
-      </div>
+      <div id="calendarWrap" class="fade-in"></div>
     </div>
   </section>
 
@@ -513,7 +418,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="footer-logo">
-            <div class="footer-logo-icon">⚽</div>
+            <img src="grafika/ekipa/logo_ekipa_zimnego_lecha.png" alt="Ekipa Zimnego Lecha" class="footer-logo-icon" />
             <div class="nav-logo-text">
               Ekipa Zimnego Lecha
               <span>Amatorska Drużyna Piłkarska</span>
@@ -571,6 +476,7 @@
   <button class="scroll-top" id="scrollTop" aria-label="Wróć na górę">↑</button>
 
   <script src="js/news.js"></script>
+  <script src="js/calendar.js"></script>
   <script src="js/index.js"></script>
 
 </body>
