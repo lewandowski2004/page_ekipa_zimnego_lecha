@@ -1,80 +1,145 @@
 const NEWS = [
   {
+    id: 5,
+    title: "CO ZA MECZ! Wygrywamy festiwal strzelecki w Bodzanowie 8:4!",
+    titleHighlight: "festiwal strzelecki",
+    category: "Mecz",
+    date: "2026-06-05",
+    dateDisplay: "5 czerwca 2026",
+    author: "Redakcja",
+    emoji: "🔥",
+    image: "grafika/aktualnosci/aktualnosci_raciaz.jpg",
+    excerpt: "Za nami niezwykle emocjonujące spotkanie! Jako gospodarze na boisku Huragan Bodzanów podjęliśmy drużynę Oldboy Raciąż i wygraliśmy festiwal strzelecki 8:4 po 90 minutach walki!",
+    content: `
+      <p>Za nami niezwykle emocjonujące spotkanie, w którym jako gospodarze na boisku Huragan Bodzanów podjęliśmy drużynę Oldboy Raciąż. Na ten mecz wybieramy się w liczbie 15 zawodników, na miejscu melduje się również wsparcie z trybun — kibice.</p>
+      <p>Od samego początku zadbaliśmy o odpowiednią atmosferę — na trybunach dumnie zawisła flaga <strong>EKIPOWICZE</strong>, a oprawa z wykorzystaniem stroboskopów stworzyła prawdziwie meczowy klimat.</p>
+      <p>Od początku spodziewaliśmy się, że to spotkanie nie będzie przypominać naszej pierwszej potyczki w Uniecku. Drużyna z Raciąża postawiła poprzeczkę bardzo wysoko, dzięki czemu kibice zobaczyli świetne widowisko w pełnym wymiarze 2x45min.</p>
+      <p>Oglądaliśmy mnóstwo widowiskowych akcji i szybkich wymian podań z obu stron. To był prawdziwy rollercoaster i gra <strong>„bramka za bramkę"</strong>, która ostatecznie po 90 minutach walki zakończyła się naszym zwycięstwem <strong>8:4!</strong></p>
+      <p>Co najważniejsze — mimo kilku drobnych przewinień na boisku — nikt nie doznał kontuzji i wszyscy kończą mecz w pełnym zdrowiu. Klasę pokazaliśmy również po ostatnim gwizdku, pozostawiając szatnie gospodarzy idealnie posprzątaną i umytą.</p>
+      <p>Wielkie podziękowania należą się zawodnikom Ekipy za walkę do samego końca, a drużynie z Raciąża za świetną sportową rywalizację. Dziękujemy klubowi Huragan Bodzanów za gościnność i udostępniony obiekt. Osobne podziękowania kierujemy do kibiców za głośne brawa oraz sponsorów, których wsparcie napędza nas do działania.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:32px 0;">
+        <img src="grafika/aktualnosci/aktualnosci_raciaz_1.jpg" alt="Mecz Bodzanów 1" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+        <img src="grafika/aktualnosci/aktualnosci_raciaz_2.jpg" alt="Mecz Bodzanów 2" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+      </div>
+      <h3>Skład Ekipy</h3>
+      <ul>
+        <li>Marcin Jankowski</li>
+        <li>Luki Lakito</li>
+        <li>Volodymyr Los</li>
+        <li>Piotr Buczkowski</li>
+        <li>Piotr Rakowski</li>
+        <li>Krystian Korpowski</li>
+        <li>Adrian Wiśniewski</li>
+        <li>Piotrek Koszalski</li>
+        <li>Damian Strzelczak</li>
+        <li>Radek Lewandowski</li>
+        <li>Sebastian Góralski</li>
+        <li>Bartek Borucki</li>
+        <li>Krzysztof Penkala</li>
+        <li>Gabriel Herman</li>
+        <li>Janek Nowacki 😊💪 (kontuzjowany, ale zawsze z drużyną)</li>
+        <li>Dawid Brzeski 😊💪 (kontuzjowany, ale zawsze z drużyną)</li>
+      </ul>
+      <h3>Podziękowania dla Sponsorów</h3>
+      <ul>
+        <li>MARK-GAZ</li>
+        <li>Traker</li>
+        <li>Trans-Sprzęt-Handel Lewandowski</li>
+        <li>Solidne Ubezpieczenia — Elżbieta Jakubowska</li>
+        <li>MON GAZ</li>
+        <li>Wulkanizator Z Przypadku</li>
+        <li>Młyn Przedpełce</li>
+        <li>Instal-Pro</li>
+        <li>DJ RAVI — Mirosław Kopyt</li>
+        <li>STOLRYŚ — Ryszard Suminski</li>
+      </ul>
+      <p style="text-align:center;font-size:1.3em;margin-top:8px;">Dziękujemy 👏</p>
+    `,
+  },
+  {
     id: 1,
-    title: "Nowe stroje dla całej Ekipy!",
-    titleHighlight: "Ekipy",
+    title: "Mamy to! Prezentujemy TRZECI komplet naszych strojów!",
+    titleHighlight: "TRZECI",
     category: "Drużyna",
     date: "2026-05-20",
     dateDisplay: "20 maja 2026",
     author: "Kapitan",
     emoji: "🎽",
-    excerpt: "Ekipa Zimnego Lecha wchodzi w nowy sezon z przytupem! Dzięki wsparciu naszego partnera — firmy Instal Pro — cały skład otrzymał nowe, efektowne stroje meczowe w barwach klubu.",
+    image: "grafika/aktualnosci/aktualnosci_nowe_stroje.jpg",
+    heroImage: "grafika/aktualnosci/aktualnosc_nowe_stroje_1.jpg",
+    excerpt: "Z ogromną dumą i radością prezentujemy już TRZECI komplet naszych strojów! Nowe koszulki Ekipy Zimnego Lecha prezentują się po prostu MEGA — powstały dzięki wsparciu firm MARK-GAZ i MON GAZ.",
     content: `
-      <p>To był jeden z tych dni, na które czekaliśmy od dawna. Nowe stroje meczowe Ekipy Zimnego Lecha oficjalnie trafiły w ręce zawodników! Dzięki hojnemu wsparciu firmy <strong>Instal Pro</strong> — jednego z naszych głównych sponsorów — cała drużyna może odtąd prezentować się na boisku w profesjonalnych, eleganckich barwach.</p>
-      <p>Stroje utrzymane są w charakterystycznej czarno-pomarańczowej kolorystyce klubu. Każdy zawodnik otrzymał komplet: koszulkę wyjazdową i domową, spodenki oraz getry. Na plecach widnieje numer i nazwisko, a na piersi — logo Ekipy Zimnego Lecha.</p>
-      <p>— <em>„Zawsze marzyliśmy o tym, żeby wyglądać jak prawdziwa drużyna. Teraz to marzenie się spełniło. Ogromne podziękowania dla Instal Pro za to wsparcie!"</em> — powiedział kapitan drużyny.</p>
-      <p>Nowe stroje zobaczycie już podczas najbliższego meczu ligowego zaplanowanego na 14 czerwca. Zapraszamy kibiców i trzymajcie za nas kciuki!</p>
-    `,
-  },
-  {
-    id: 2,
-    title: "Turniej halowy — 2. miejsce w Zimowym Pucharze Orłów!",
-    titleHighlight: "halowy",
-    category: "Turniej",
-    date: "2026-04-12",
-    dateDisplay: "12 kwietnia 2026",
-    author: "Redakcja",
-    emoji: "🏆",
-    excerpt: "Ekipa Zimnego Lecha zakończyła sezon halowy z medalem! W turnieju Zimowy Puchar Orłów zajęliśmy zasłużone 2. miejsce, wygrywając 3 z 4 rozegranych meczów grupowych.",
-    content: `
-      <p>Weekend 11–12 kwietnia przeszedł do historii naszej drużyny. W hali sportowej odbył się <strong>Zimowy Puchar Orłów</strong> — jeden z najbardziej prestiżowych turniejów halowych w regionie. Ekipa Zimnego Lecha stanęła do rywalizacji z siedmioma innymi drużynami i wywalczyła <strong>srebrny medal</strong>!</p>
-      <h3>Wyniki grupowe</h3>
-      <p>W fazie grupowej zagraliśmy cztery spotkania:</p>
+      <p>Z ogromną dumą i radością prezentujemy Wam już <strong>TRZECI komplet naszych strojów!</strong> Nowe koszulki Ekipy Zimnego Lecha prezentują się po prostu — <strong>M E G A!</strong> 😎</p>
+      <p>Nowe trykoty powstały z naszych własnych środków oraz dzięki niesamowitemu wsparciu niezawodnych firm <strong>MARK-GAZ</strong> i <strong>MON GAZ</strong>. Bardzo dziękujemy! 🫶🤝</p>
+      <p>Szczególne słowa uznania i podziękowania kierujemy do <strong>Pani Moniki Markuszewskiej</strong> oraz <strong>Pana Mieczysława Markuszewskiego</strong>. Dziękujemy za dobro płynące z Waszych serc i za to, że tak chętnie realizujecie z nami kolejny projekt. Bez Waszego wsparcia to by się nie udało! 👏❤️</p>
+      <p>Za perfekcyjne wykonanie naszych nowych strojów odpowiada polski producent odzieży sportowej <strong>3STU Krzysiek Adamski</strong> 💪. Koszulki są najwyższej jakości i idealnie wpisują się w nasz styl — polecamy ich usługi każdej drużynie! ⚽</p>
+      <p>Projekt koszulki to pomysł Ekipy! 😁🦾</p>
+      <p>Autorką tych pięknych, klimatycznych zdjęć, które idealnie oddają charakter naszej ekipy, jest <strong>PhotoNatka</strong> 😊📸</p>
+      <p>Dziękujemy wszystkim, którzy tworzą z nami tę społeczność. Lecimy dalej! 🚀</p>
+      <p>Pełna mobilizacja w zespole — na wtorkowym treningu stawiło się <strong>17 zawodników</strong>, którzy z pełnym zaangażowaniem wykorzystują czas na orliku. Janku Nowacki — życzymy zdrowia i szybkiego powrotu na boisko! 💪❤️</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:32px 0;">
+        <img src="grafika/aktualnosci/aktualnosci_nowe_stroje.jpg" alt="Nowe stroje Ekipy 1" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+        <img src="grafika/aktualnosci/aktualnosc_nowe_stroje_1.jpg" alt="Nowe stroje Ekipy 2" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+      </div>
+      <h3>Wyróżnienia</h3>
       <ul>
-        <li>Ekipa Zimnego Lecha — Błyskawica Koło &nbsp;<strong>3:1 ✅</strong></li>
-        <li>Ekipa Zimnego Lecha — Dynamo Południe &nbsp;<strong>2:0 ✅</strong></li>
-        <li>Ekipa Zimnego Lecha — FC Kolejarz &nbsp;<strong>1:1 🟡</strong></li>
-        <li>Ekipa Zimnego Lecha — Huragan Wschód &nbsp;<strong>2:1 ✅</strong></li>
+        <li>MARK-GAZ</li>
+        <li>MON GAZ</li>
       </ul>
-      <h3>Finał</h3>
-      <p>Do finału awansowaliśmy z 1. miejsca w grupie. W wielkim finale trafiliśmy na bardzo silnych rywali z <strong>Orłów Północy</strong>, którzy ostatecznie pokonali nas 2:1 po zaciętej walce. Mimo tej porażki jesteśmy dumni z całego turnieju — to nasz najlepszy wynik w historii startów w rozgrywkach halowych!</p>
-      <p>— <em>„Chłopaki dali z siebie wszystko przez cały weekend. Finał był bardzo wyrównany, zabrakło trochę szczęścia, ale wracamy z głowami do góry i już planujemy kolejny sezon halowy."</em> — podsumował trener po zakończeniu turnieju.</p>
-      <p>Dziękujemy wszystkim kibicom, którzy dopingowali nas na trybunach. Wasza obecność dodaje nam skrzydeł!</p>
     `,
   },
   {
     id: 3,
-    title: "Sparing z Huragan Wschód — wygrywamy 2:1!",
-    titleHighlight: "Wschód",
-    category: "Mecz",
-    date: "2026-03-28",
-    dateDisplay: "28 marca 2026",
+    title: "Nowy partner! Instal-Pro dołącza do sponsorów Ekipy!",
+    titleHighlight: "Instal-Pro",
+    category: "Drużyna",
+    date: "2026-04-05",
+    dateDisplay: "5 kwietnia 2026",
     author: "Redakcja",
-    emoji: "⚽",
-    excerpt: "Pierwsze wiosenne spotkanie sparingowe za nami! Na własnym boisku pewnie pokonaliśmy Huragan Wschód 2:1. Bramki zdobyli Radosław Lewandowski i Adrian Wiśniewski.",
+    emoji: "🤝",
+    image: "grafika/aktualnosci/aktualnosci_nowy_partner_instal_pro.jpg",
+    heroImage: "grafika/aktualnosci/aktualnosci_nowy_partner_instal_pro.jpg",
+    excerpt: "Z wielką dumą ogłaszamy, że do grona naszych oficjalnych sponsorów dołącza lokalna firma Instal-Pro Łukasz Dymek z Ciółkówka! I od razu rusza z dużym projektem dla zawodników!",
     content: `
-      <p>Wraz z nadejściem wiosny Ekipa Zimnego Lecha wróciła na zielone boisko! W sobotnie południe 28 marca rozegraliśmy pierwsze wiosenne spotkanie sparingowe, mierząc się z dobrze nam znany <strong>Huragan Wschód</strong>.</p>
-      <p>Mecz od początku toczył się w dobrym tempie. Już w 12. minucie <strong>Radosław Lewandowski</strong> otworzył wynik pięknym strzałem z okolicy pola karnego. Rywale odpowiedzieli w drugiej połowie, doprowadzając do remisu 1:1. Wydawało się, że spotkanie zakończy się podziałem punktów, jednak w końcówce <strong>Adrian Wiśniewski</strong> zapewnił nam zwycięstwo, trafiając głową po dośrodkowaniu z prawego skrzydła.</p>
-      <p>Wynik końcowy: <strong>Ekipa Zimnego Lecha 2:1 Huragan Wschód</strong>.</p>
-      <p>— <em>„Dobry test przed sezonem ligowym. Widzimy, że forma rośnie, a nowe ustawienie taktyczne przynosi efekty. Jesteśmy gotowi na to, co przed nami."</em> — ocenił trener po meczu.</p>
-      <p>Kolejny sparing zaplanowany jest na 21 czerwca. Zapraszamy wszystkich kibiców na trybunę!</p>
+      <p>Z wielką dumą i radością ogłaszamy, że do grona naszych oficjalnych sponsorów dołącza lokalna firma <strong>Instal-Pro Łukasz Dymek</strong> z Ciółkówka!</p>
+      <p>Instal-Pro to prawdziwi profesjonaliści, którzy na co dzień dbają o komfort mieszkańców naszego regionu i nie tylko, dostarczając najwyższej jakości usługi w zakresie:</p>
+      <ul>
+        <li><strong>Instalacje grzewcze</strong> — montaż nowoczesnych pieców, pomp ciepła i systemów ogrzewania podłogowego</li>
+        <li><strong>Instalacje sanitarne</strong> — profesjonalne wykonawstwo instalacji wodno-kanalizacyjnych i gazowych</li>
+        <li><strong>Serwis i doradztwo</strong> — szybkie usuwanie awarii oraz doradztwo w doborze energooszczędnych rozwiązań</li>
+      </ul>
+      <p>Nie marnujemy czasu! Ta współpraca nie zaczyna się od obietnic, ale od <strong>konkretnego działania</strong>. Z pierwszym dniem wejścia do naszej sponsorskiej rodziny firma Instal-Pro rusza z pierwszym dużym projektem dedykowanym bezpośrednio naszym zawodnikom! Szczegóły tej wyjątkowej akcji ujawnimy już wkrótce, ale zapewniamy — to będzie potężny impuls rozwoju dla całej drużyny!</p>
+      <p>Dla nas to partnerstwo to dowód na to, że lokalny biznes i sport idą w jednej zgranej lidze — mimo że liga się kończy, ale wszystko przed nami! 😁⚽</p>
+      <p>Wspólnie mierzymy wysoko i jesteśmy pewni, że ta współpraca przyniesie nam wielki sukces — zarówno na boisku, jak i poza nim! 🏆</p>
+      <p>📧 <a href="mailto:instal.pro.plock@gmail.com" style="color:var(--orange);">instal.pro.plock@gmail.com</a></p>
+      <p><strong>Łukasz Dymek i cała załoga Instal-Pro</strong> — witamy na pokładzie Ekipy Zimnego Lecha! ⛴️</p>
+      <p>Dziękujemy za zaufanie! ⚽🤝💪</p>
+      <img src="grafika/aktualnosci/aktualnosci_nowy_partner_instal_pro.jpg" alt="Nowy partner Instal-Pro" style="width:100%;border-radius:4px;object-fit:cover;margin-top:32px;" />
     `,
   },
   {
-    id: 4,
-    title: "Integracja po sezonie zimowym — wspominamy razem!",
-    titleHighlight: "razem",
+    id: 6,
+    title: "Nowy sprzęt dla naszych zawodników!",
+    titleHighlight: "sprzęt",
     category: "Drużyna",
-    date: "2026-02-15",
-    dateDisplay: "15 lutego 2026",
-    author: "Kapitan",
-    emoji: "📸",
-    excerpt: "Sezon zimowy zakończony — czas na zasłużoną integrację! Cała ekipa spotkała się przy ognisku, by wspólnie podsumować minione miesiące i naładować baterie przed wiosenną kampanią.",
+    date: "2026-03-10",
+    dateDisplay: "10 marca 2026",
+    author: "Redakcja",
+    emoji: "👕",
+    image: "grafika/aktualnosci/aktualnosci_nowy_sprzet.jpg",
+    heroImage: "grafika/aktualnosci/aktualnosci_nowy_sprzet_1.jpg",
+    excerpt: "Podczas ostatniego treningu nasi zawodnicy otrzymali nowe spodnie dresowe marki JOMA. Od teraz Ekipa będzie prezentować się jeszcze lepiej i trenować w pełnym komforcie!",
     content: `
-      <p>Po intensywnym sezonie zimowym przyszedł czas na chwilę oddechu i wspólne świętowanie. 15 lutego cała Ekipa Zimnego Lecha spotkała się na tradycyjnej integracji, która stała się okazją do podsumowania minionego sezonu i naładowania baterii przed wiosenną kampanią.</p>
-      <p>Spotkanie odbyło się przy ognisku w gronie zawodników, sztabu szkoleniowego i najbliższych. Nie zabrakło dobrego jedzenia, śmiechu i oczywiście — zimnego Lecha! Kapitan wygłosił krótkie przemówienie, dziękując każdemu za zaangażowanie i poświęcenie przez cały sezon.</p>
-      <p>— <em>„To właśnie takie chwile tworzą drużynę. Możemy być dumni z tego, co razem osiągnęliśmy. Już nie możemy się doczekać wiosny!"</em> — powiedział kapitan ku aplauzowi całej ekipy.</p>
-      <p>Zdjęcia z integracji wkrótce pojawią się w naszej galerii. Dziękujemy wszystkim za obecność i do zobaczenia na boisku!</p>
+      <p>Podczas ostatniego treningu nasi zawodnicy otrzymali <strong>nowe spodnie dresowe marki JOMA</strong>. Od teraz nasi zawodnicy będą prezentować się jeszcze lepiej i trenować w pełnym komforcie.</p>
+      <p>Serdecznie dziękujemy firmie <strong>MARK-GAZ</strong> za sfinansowanie zakupu — Wasze wsparcie jest dla nas nieocenione! ☺️🤝💪❤️</p>
+      <p>Słowa uznania kierujemy również do firmy <strong>Whitepro Reklama</strong> za profesjonalne przygotowanie personalizacji, naniesienie logotypów sponsora oraz numerację spodni. Dziękujemy za profesjonalne logo Ekipy 🤝👍 Kawał dobrej roboty! 🦾 Z całego serca polecamy Was.</p>
+      <p>Wybierając dostawy gazu stawiasz na bezpieczeństwo swojej rodziny. W <strong>MARK-GAZ</strong> dbają o to, by gaz trafił do Ciebie zawsze na czas i spełniał najwyższe normy jakości. Dołącz do grona zadowolonych klientów i poczuj różnicę!</p>
+      <p><strong>MARK-GAZ</strong> — Ciepło, na którym możesz polegać.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin:32px 0;">
+        <img src="grafika/aktualnosci/aktualnosci_nowy_sprzet.jpg"   alt="Nowy sprzęt 1" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+        <img src="grafika/aktualnosci/aktualnosci_nowy_sprzet_1.jpg" alt="Nowy sprzęt 2" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+        <img src="grafika/aktualnosci/aktualnosci_nowy_sprzet_2.jpg" alt="Nowy sprzęt 3" style="width:100%;border-radius:4px;object-fit:cover;aspect-ratio:4/3;" />
+      </div>
     `,
   },
 ];
@@ -107,7 +172,9 @@ function renderMainPageNews() {
   grid.innerHTML = `
     <a href="aktualnosc.html?id=${featured.id}" class="news-card">
       <div class="news-card-image">
-        <div class="news-card-placeholder">${featured.emoji}</div>
+        ${featured.image
+          ? `<img src="${featured.image}" alt="${featured.title}" style="width:100%;height:100%;object-fit:cover;" />`
+          : `<div class="news-card-placeholder">${featured.emoji}</div>`}
         <span class="news-badge">Wyróżnione</span>
       </div>
       <div class="news-card-body">
@@ -131,7 +198,9 @@ function renderNewsListing() {
   grid.innerHTML = NEWS.map(n => `
     <a href="aktualnosc.html?id=${n.id}" class="nl-card fade-in">
       <div class="nl-card-image">
-        <div class="nl-card-placeholder">${n.emoji}</div>
+        ${n.image
+          ? `<img src="${n.image}" alt="${n.title}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;" />`
+          : `<div class="nl-card-placeholder">${n.emoji}</div>`}
         <span class="nl-badge">${n.category}</span>
       </div>
       <div class="nl-card-body">
@@ -194,7 +263,8 @@ function renderNewsArticle() {
     </a>`).join('');
 
   wrap.innerHTML = `
-    <section class="article-hero fade-in">
+    <section class="article-hero fade-in" ${(news.heroImage || news.image) ? `style="background-image:url('${news.heroImage || news.image}');background-size:cover;background-position:center;"` : ''}>
+      ${news.image ? '<div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(13,13,13,.92) 40%,rgba(13,13,13,.6) 100%);"></div>' : ''}
       <div class="article-hero-shape"></div>
       <div class="container">
         <div class="article-breadcrumb">
