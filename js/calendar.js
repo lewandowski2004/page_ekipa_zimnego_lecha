@@ -71,6 +71,34 @@ function renderCalendar() {
       </div>`;
   }).join('');
 
+  // Agenda (mobile) — events for current month sorted by date
+  const monthEvents = EVENTS
+    .filter(ev => {
+      const [y, m] = ev.date.split('-').map(Number);
+      return y === YEAR && m === calMonth + 1;
+    })
+    .sort((a, b) => a.date.localeCompare(b.date));
+
+  const agendaHTML = monthEvents.length
+    ? monthEvents.map(ev => {
+        const day = parseInt(ev.date.split('-')[2], 10);
+        return `
+          <div class="cal-agenda-item">
+            <div class="cal-agenda-date cal-event--${ev.type}">
+              <span class="cal-agenda-day">${day}</span>
+              <span class="cal-agenda-mon">${MONTHS_PL[calMonth].slice(0,3).toUpperCase()}</span>
+            </div>
+            <div class="cal-agenda-info">
+              ${ev.name ? `<div class="cal-agenda-name">${ev.name}</div>` : ''}
+              <span class="cal-tip-badge cal-event--${ev.type}">${TYPE_LABELS[ev.type]||ev.type}</span>
+              <div class="cal-agenda-title-ev">${ev.title}</div>
+              ${ev.time     ? `<div class="cal-agenda-row">🕐 ${ev.time}</div>`     : ''}
+              ${ev.location ? `<div class="cal-agenda-row">📍 ${ev.location}</div>` : ''}
+            </div>
+          </div>`;
+      }).join('')
+    : `<div class="cal-agenda-empty">Brak wydarzeń w tym miesiącu</div>`;
+
   wrap.innerHTML = `
     <div class="cal-nav">
       <button class="cal-nav-btn" id="calPrev" ${calMonth===0?'disabled':''}>&#8592;</button>
@@ -80,8 +108,9 @@ function renderCalendar() {
       </div>
       <button class="cal-nav-btn" id="calNext" ${calMonth===11?'disabled':''}>&#8594;</button>
     </div>
-    <div class="cal-weekdays">${DAYS_PL.map(d=>`<div class="cal-wday">${d}</div>`).join('')}</div>
-    <div class="cal-grid">${cellsHTML}</div>
+    <div class="cal-weekdays cal-desktop-only">${DAYS_PL.map(d=>`<div class="cal-wday">${d}</div>`).join('')}</div>
+    <div class="cal-grid cal-desktop-only">${cellsHTML}</div>
+    <div class="cal-agenda cal-mobile-only">${agendaHTML}</div>
     <div class="cal-legend">
       <span class="cal-leg"><span class="cal-dot cal-event--mecz"></span>Mecz</span>
       <span class="cal-leg"><span class="cal-dot cal-event--sparing"></span>Sparing</span>

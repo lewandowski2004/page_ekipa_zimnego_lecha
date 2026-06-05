@@ -886,6 +886,96 @@
   color: var(--gray);
 }
 
+/* ─── PRZEŁĄCZNIK DESKTOP / MOBILE ─────────────────────────────── */
+.cal-mobile-only { display: none !important; }
+.cal-desktop-only { display: grid; }
+
+/* ─── WIDOK LISTY (AGENDA) — MOBILE ────────────────────────────── */
+.cal-agenda { display: flex; flex-direction: column; gap: 12px; }
+
+.cal-agenda-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background: var(--dark3);
+  border-radius: 4px;
+  padding: 16px;
+  border-left: 3px solid transparent;
+}
+
+.cal-agenda-date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 48px;
+  padding: 8px 6px;
+  border-radius: 4px;
+  background: rgba(255,255,255,.05);
+}
+
+.cal-event--mecz    .cal-agenda-day { color: var(--orange); }
+.cal-event--sparing .cal-agenda-day { color: #4DB6AC; }
+.cal-event--turniej .cal-agenda-day { color: #FFD54F; }
+.cal-event--trening .cal-agenda-day { color: #81C784; }
+.cal-event--inne    .cal-agenda-day { color: var(--gray); }
+
+.cal-agenda-day {
+  font-family: var(--font-h);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.cal-agenda-mon {
+  font-family: var(--font-h);
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: var(--gray);
+  margin-top: 3px;
+}
+
+.cal-agenda-info { flex: 1; }
+
+.cal-agenda-name {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--orange);
+  text-transform: uppercase;
+  font-family: var(--font-h);
+  margin-bottom: 4px;
+}
+
+.cal-agenda-title-ev {
+  font-family: var(--font-h);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--white);
+  margin: 6px 0 6px;
+}
+
+.cal-agenda-row {
+  font-size: 12px;
+  color: rgba(255,255,255,.55);
+  margin-top: 3px;
+}
+
+.cal-agenda-empty {
+  font-family: var(--font-h);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gray);
+  text-align: center;
+  padding: 32px 0;
+}
+
+@media (max-width: 640px) {
+  .cal-mobile-only  { display: flex !important; }
+  .cal-desktop-only { display: none !important; }
+}
+
 /* ─── FORMULARZE ─────────────────────────────────────────────────── */
 .forms-section {
   background: var(--black);
