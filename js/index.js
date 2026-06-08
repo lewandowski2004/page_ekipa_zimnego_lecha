@@ -98,24 +98,48 @@ function setupForm(formId, successId, subject) {
       if (field.value) data[key] = field.value;
     });
 
+    const formEl = this;
+
+    // Klasyczny POST — działa zawsze (m.in. wyzwala jednorazową aktywację adresu e-mail w FormSubmit)
+    function fallbackClassicSubmit() {
+      const hidden = document.createElement('form');
+      hidden.method = 'POST';
+      hidden.action = `https://formsubmit.co/${FORM_TARGET_EMAIL}`;
+      hidden.style.display = 'none';
+      Object.entries(data).forEach(([key, val]) => {
+        const inp = document.createElement('input');
+        inp.type = 'hidden';
+        inp.name = key;
+        inp.value = val;
+        hidden.appendChild(inp);
+      });
+      const captcha = document.createElement('input');
+      captcha.type = 'hidden';
+      captcha.name = '_captcha';
+      captcha.value = 'false';
+      hidden.appendChild(captcha);
+      document.body.appendChild(hidden);
+      hidden.submit();
+    }
+
     fetch(FORM_AJAX_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data),
     })
       .then(res => {
-        if (!res.ok) throw new Error('Błąd wysyłki');
-        this.reset();
+        if (!res.ok) throw new Error('Błąd wysyłki AJAX');
+        formEl.reset();
         const success = document.getElementById(successId);
         success.style.display = 'block';
         setTimeout(() => { success.style.display = 'none'; }, 5000);
-      })
-      .catch(() => {
-        alert('Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie później lub napisz do nas bezpośrednio.');
-      })
-      .finally(() => {
         btn.textContent = originalLabel;
         btn.disabled = false;
+      })
+      .catch(() => {
+        // AJAX może nie działać, dopóki adres e-mail nie zostanie jednorazowo aktywowany —
+        // w takim wypadku wysyłamy zgłoszenie klasyczną metodą (przeładowanie strony).
+        fallbackClassicSubmit();
       });
   });
 }
