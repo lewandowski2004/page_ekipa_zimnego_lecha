@@ -4,233 +4,293 @@
 const SPONSORS = [
   {
     id: 1,
-    name: "Instal Pro",
+    name: "Instal-Pro Łukasz Dymek",
     nameHighlight: "Pro",
-    tagline: "Kompleksowe usługi instalacyjne — do uzupełnienia",
+    tagline: "Profesjonalne instalacje grzewcze i sanitarne",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_instal_pro.jpg",
     logoEmoji: "🔧",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Instal-Pro Łukasz Dymek to lokalna firma z Ciółkówka, której zespół na co dzień dba o komfort mieszkańców regionu, dostarczając usługi instalacyjne na najwyższym poziomie.</p>
+      <p>W zakresie działalności firmy znajdują się m.in.:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li><strong>Instalacje grzewcze</strong> — montaż nowoczesnych pieców, pomp ciepła i systemów ogrzewania podłogowego</li>
+        <li><strong>Instalacje sanitarne</strong> — profesjonalne wykonawstwo instalacji wodno-kanalizacyjnych i gazowych</li>
+        <li><strong>Serwis i doradztwo</strong> — szybkie usuwanie awarii oraz pomoc w doborze energooszczędnych rozwiązań</li>
+      </ul>
+      <p>Właściciela firmy znajdziesz też na prywatnym profilu: <a href="https://www.facebook.com/lukaaszek1205" target="_blank" rel="noopener" style="color:var(--orange);">facebook.com/lukaaszek1205</a></p>
+`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Instalacje grzewcze i sanitarne" },
+      { icon: "📍", title: "Lokalizacja", desc: "Ciółkówko" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Piece, pompy ciepła, ogrzewanie podłogowe" },
     ],
     contact: {
-      email: "",
+      email: "instal.pro.plock@gmail.com",
       phone: "",
       website: "",
-      address: "",
+      address: "Ciółkówko 2, Radzanowo, 09-451",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/instalprolukaszdymek", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 2,
-    name: "Solidne Ubezpieczenia",
+    name: "Solidne Ubezpieczenia Elżbieta Jakubowska",
     nameHighlight: "Ubezpieczenia",
-    tagline: "Twoje bezpieczeństwo w dobrych rękach — do uzupełnienia",
+    tagline: "Twoje bezpieczeństwo w dobrych rękach",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_solidne_ubezpieczenia.jpg",
     logoEmoji: "🛡️",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Firma Solidne Ubezpieczenia Elżbieta Jakubowska to biuro ubezpieczeniowe z siedzibą w Ciółkówku, które stawia na indywidualne podejście do klienta i realną pomoc w trudnych sytuacjach życiowych.</p>
+      <p>Dom 🏠 Samochód 🚗 Rodzina 👫 Zdrowie 🩺</p>
+      <p>Wszystko, co dla Ciebie ważne, zasługuje na solidną ochronę. Nie czekaj, aż wydarzy się coś złego — bądź o krok przed nim z Solidne Ubezpieczenia Elżbieta Jakubowska.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Ubezpieczenia" },
+      { icon: "📍", title: "Lokalizacja", desc: "Ciółkówko" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Dom, samochód, rodzina, zdrowie" },
     ],
     contact: {
-      email: "",
-      phone: "",
-      website: "",
-      address: "",
+      email: "e-jakub@wp.pl",
+      phone: "664-443-999",
+      website: "https://jakubowskaubezpieczenia.pl/",
+      address: "Ciółkówko 44",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/profile.php?id=100084899163407", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 3,
     name: "Mon Gaz",
     nameHighlight: "Gaz",
-    tagline: "Usługi gazowe na najwyższym poziomie — do uzupełnienia",
+    tagline: "Myjnie samoobsługowe czynne całą dobę",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_mon_gaz.jpg",
     logoEmoji: "🔥",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Mon Gaz to sieć myjni samoobsługowych, dostępnych dla klientów przez całą dobę, zlokalizowanych w Płocku oraz Sochaczewie.</p>
+      <p>Aktualne lokalizacje myjni:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li>Płock, ul. Rembielińskiego 10B</li>
+        <li>Sochaczew, ul. Warszawska 67A</li>
+      </ul>
+      <p>Firma cieszy się zaufaniem lokalnej społeczności, oferując wygodne i dostępne o każdej porze rozwiązanie do szybkiego i dokładnego mycia samochodu.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Myjnie samoobsługowe" },
+      { icon: "📍", title: "Lokalizacja", desc: "Płock, Sochaczew" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Mycie samochodów — czynne całą dobę" },
     ],
     contact: {
-      email: "",
+      email: "monika.markuszewska@onet.pl",
       phone: "",
       website: "",
-      address: "",
+      address: "ul. Rembielińskiego 10B, 09-400 Płock",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/PPHMONGAZ/", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 4,
     name: "Traker",
     nameHighlight: "Traker",
-    tagline: "Do uzupełnienia",
+    tagline: "Profesjonalny ośrodek szkoleniowy z Płocka",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_traker.jpg",
     logoEmoji: "📡",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Firma Traker to profesjonalny ośrodek szkoleniowy z Płocka, który stawia na budowanie solidnych fundamentów i pewności siebie za kierownicą. Ośrodek wyróżnia się nowoczesnym podejściem oraz wykwalifikowaną kadrą — Dawid Piotrowski. 💪</p>
+      <p>W ofercie znajdziesz m.in.:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li>Prawo jazdy kat. B oraz kat. B (automat)</li>
+        <li>Kursy ADR, kwalifikacja wstępna i okresowa dla kierowców zawodowych</li>
+        <li>Wózki widłowe, podesty ruchome, żurawie przenośne, HDS, sygnalista hakowy</li>
+        <li>Obsługa ciągnika siodłowego, urządzenia NO, Certyfikat Kompetencji Zawodowych</li>
+      </ul>
+      <p>Ośrodek działa przy ul. Dobrzyńskiej 13/1 w Płocku (pon.–pt. 8:00–16:00) i jako „eksperci od szkoleń” oferuje swoim kursantom również własną platformę e-learningową, ułatwiającą naukę teorii w dogodnym tempie.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Szkolenia kierowców i operatorów" },
+      { icon: "📍", title: "Lokalizacja", desc: "Płock, ul. Dobrzyńska 13/1" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Prawo jazdy kat. B, ADR, HDS, wózki widłowe" },
     ],
     contact: {
       email: "",
-      phone: "",
-      website: "",
-      address: "",
+      phone: "728 323 521",
+      website: "https://e-traker.pl/",
+      address: "ul. Dobrzyńska 13/1, Płock",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/profile.php?id=100063876919012", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 5,
-    name: "Mark Gaz",
+    name: "PPH Mark-Gaz",
     nameHighlight: "Gaz",
-    tagline: "Profesjonalne usługi gazowe — do uzupełnienia",
+    tagline: "Ekspresowe dostawy gazu propan od ponad 25 lat",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_mark_gaz.jpg",
     logoEmoji: "🔥",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>PPH Mark-Gaz to rodzinna firma z Płocka, która od ponad 25 lat dostarcza gaz propan klientom indywidualnym, firmom oraz gospodarstwom rolnym na terenie Płocka, Sierpca, Włocławka i okolic.</p>
+      <p>Firma oferuje m.in. dostawy gazu butlowego do domów, dystrybucję LPG dla stacji paliw, propan przemysłowy dla biznesu, paliwo do wózków widłowych, wynajem przyczep oraz całodobową stację wagową. Klienci mogą liczyć na ekspresową dostawę — zwykle w ciągu około 45 minut — z elastycznym zamawianiem telefonicznie lub SMS-em.</p>
+      <p>Mark-Gaz to gwarancja sprawdzonej jakości paliwa, terminowości i przejrzystych warunków współpracy — bez ukrytych kosztów.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Dostawy gazu propan (LPG)" },
+      { icon: "📍", title: "Lokalizacja", desc: "Płock (ul. Stefana Banacha 10)" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Gaz do domów, firm i gospodarstw rolnych" },
     ],
     contact: {
-      email: "",
-      phone: "",
-      website: "",
-      address: "",
+      email: "biuro@markgaz.pl",
+      phone: "801 402 403",
+      website: "https://markgaz.pl/",
+      address: "ul. Stefana Banacha 10, 09-407 Płock",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/PPHMARKGAZ", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 6,
-    name: "TSH Lewandowski",
+    name: "Trans-Sprzęt-Handel Lewandowski",
     nameHighlight: "Lewandowski",
-    tagline: "Do uzupełnienia",
+    tagline: "Kruszywa, transport i roboty ziemne od 1990 roku",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_tsh_lewandowski.jpg",
     logoEmoji: "🏢",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Trans-Sprzęt-Handel Lewandowski to rodzinna firma działająca od 1990 roku, świadcząca usługi transportowe, sprzedaż kruszyw oraz roboty ziemne na terenie Płocka, Sochaczewa, Wyszogrodu i okolic.</p>
+      <p>W ofercie firmy znajdziesz m.in.:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li><strong>Sprzedaż kruszyw</strong> — piasek, żwir, tłuczeń, gruz betonowy, ziemia urodzajna i torf</li>
+        <li><strong>Transport</strong> — przewozy ciężkim sprzętem, ciągnikami oraz transport specjalistyczny z usługami HDS</li>
+        <li><strong>Roboty ziemne</strong> — wykopy, niwelacja terenu, kopanie oczek wodnych, wyburzenia oraz odśnieżanie przy użyciu koparek kołowych i gąsienicowych, koparko-ładowarek JCB i równiarek</li>
+      </ul>
+      <p>Firma stawia na wysoką jakość usług, konkurencyjne ceny oraz doświadczony, w pełni wykwalifikowany zespół posiadający wymagane uprawnienia branżowe.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Transport, kruszywa, roboty ziemne" },
+      { icon: "📍", title: "Lokalizacja", desc: "Rogozino k. Płocka" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Kruszywa, transport HDS, wykopy i niwelacja terenu" },
     ],
     contact: {
-      email: "",
-      phone: "",
-      website: "",
-      address: "",
+      email: "tsh.lewandowski@gmail.com",
+      phone: "602 585 083",
+      website: "https://tshlewandowski.pl/",
+      address: "ul. Mazowiecka 74, 09-442 Rogozino",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/tsh.lewandowski", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 7,
-    name: "Paradowski Transport",
+    name: "Mobilna Wulkanizacja Płock 24h/7 Marcin Paradowski",
     nameHighlight: "Transport",
-    tagline: "Niezawodny transport na każdą odległość — do uzupełnienia",
+    tagline: "Całodobowy serwis opon i mechanika z dojazdem do klienta",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_paradowski_transport.jpg",
     logoEmoji: "🚛",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Firma Mobilna Wulkanizacja Płock 24h/7 Marcin Paradowski świadczy całodobowy serwis opon i mechanikę samochodową z dojazdem do klienta w Płocku i okolicach. Obsługuje zarówno auta osobowe, jak i samochody ciężarowe (TIR) oraz sprzęt rolniczy. Realizuje również usługi z zakresu transportu.</p>
+      <p>Zakres oferowanych usług:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li>Awaryjny dojazd do miejsca zdarzenia (parking, trasa, dom)</li>
+        <li>Wymiana i naprawa opon na drodze</li>
+        <li>Obsługa i wulkanizacja pojazdów ciężarowych (TIR) oraz osobowych</li>
+        <li>Profesjonalne wyważanie i wykręcanie zapieczonych śrub</li>
+        <li>Transport drogowy — szczegóły ustalane indywidualnie pod wskazanym numerem telefonu</li>
+      </ul>
+      <p>Dostępność: 24 godziny na dobę, 7 dni w tygodniu — w tym weekendy i święta.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Wulkanizacja i mechanika mobilna" },
+      { icon: "📍", title: "Lokalizacja", desc: "Nowe Boryszewo 98A k. Płocka" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Serwis opon 24/7 z dojazdem — auta, TIR-y, sprzęt rolniczy" },
     ],
     contact: {
       email: "",
-      phone: "",
+      phone: "727 939 676",
       website: "",
-      address: "",
+      address: "Nowe Boryszewo 98A, k. Płocka",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/profile.php?id=100076056799579", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 8,
-    name: "Młyn Przedpełce",
+    name: "Młyn Przedpełce Kocięcki Paweł",
     nameHighlight: "Przedpełce",
-    tagline: "Tradycja i jakość od pokoleń — do uzupełnienia",
+    tagline: "Ponad 150 lat tradycji rodzinnego młynarstwa",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_mlyn_przedpelce.jpg",
     logoEmoji: "🌾",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Młyn Przedpełce Kocięcki Paweł to przedsiębiorstwo z ponad 150-letnią tradycją rodzinnego młynarstwa, które łączy doświadczenie i tradycję z nowoczesnymi technologiami stosowanymi w przetwórstwie zbóż.</p>
+      <p>W ofercie młyna znajdziesz m.in.:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li>Mąki pszenne i żytnie oraz mąki orkiszowe</li>
+        <li>Otręby pszenne i żytnie</li>
+        <li>Skup pszenicy i żyta z oceną jakości we własnym laboratorium</li>
+        <li>Receptury dostosowane do indywidualnych wymagań klienta</li>
+      </ul>
+      <p>Firma stawia na własne laboratorium do badań jakości, atrakcyjne ceny, szybkie terminy realizacji oraz pełne zadowolenie klienta — na stronie znajdziesz też sekcję z recepturami i poradami piekarniczymi.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Młynarstwo i przetwórstwo zbóż" },
+      { icon: "📍", title: "Lokalizacja", desc: "Przedpełce, gm. Staroźreby" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Mąki pszenne, żytnie i orkiszowe, skup zbóż" },
     ],
     contact: {
       email: "",
       phone: "",
-      website: "",
-      address: "",
+      website: "https://www.mlynprzedpelce.com/",
+      address: "Przedpełce 15, 09-440 Staroźreby",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/profile.php?id=61579547769849", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 9,
-    name: "DJ Ravi",
+    name: "DJ Ravi Mirosław Kopyt",
     nameHighlight: "Ravi",
-    tagline: "Muzyczna oprawa każdej imprezy — do uzupełnienia",
+    tagline: "Muzyczna oprawa każdej imprezy",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_dj_ravi.jpg",
     logoEmoji: "🎧",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Wieloletnie doświadczenie, setki zagranych imprez i instynkt wyczuwania nastroju tłumu — to właśnie wyróżnia DJ Raviego na tle innych. Niezależnie od okazji, gwarantuje show, które zapadnie w pamięć.</p>
+      <p>Współpraca z profesjonalistą takim jak DJ. Ravi Mirosław Kopyt to gwarancja, że Twoje wydarzenie nabierze wyjątkowego charakteru i energii, która porwie gości na parkiet.</p>
+      <p>Dobry DJ to nie tylko osoba odtwarzająca muzykę, ale przede wszystkim architekt nastroju, który potrafi płynnie łączyć utwory i dostosować playlistę do bieżących emocji na sali.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Oprawa muzyczna imprez" },
+      { icon: "📍", title: "Lokalizacja", desc: "Ciółkowo" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "DJ na imprezy i wydarzenia" },
     ],
     contact: {
       email: "",
-      phone: "",
+      phone: "518-391-029",
       website: "",
       address: "",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "https://www.facebook.com/profile.php?id=100002569793719", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
   {
     id: 10,
-    name: "Stolrys",
+    name: "Stolryś Usługi Stolarskie",
     nameHighlight: "Stolrys",
-    tagline: "Do uzupełnienia",
+    tagline: "Meble na wymiar — 30 lat doświadczenia w stolarstwie",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_stolrys.jpg",
     logoEmoji: "🪵",
-    description: `<p>Opis firmy do uzupełnienia.</p>`,
+    description: `<p>Stolryś Usługi Stolarskie to firma z Ciółkówka, która od 30 lat działa w branży stolarskiej, tworząc meble dopasowane do indywidualnych potrzeb klientów z całej Polski i zagranicy.</p>
+      <p>W ofercie firmy znajdziesz m.in.:</p>
+      <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
+        <li>Meble na zamówienie — do domu, biura, lokali usługowych i hoteli</li>
+        <li>Meble modułowe</li>
+        <li>Drzwi wewnętrzne</li>
+        <li>Usługi CNC, oklejanie i lakierowanie</li>
+      </ul>
+      <p>Zespół profesjonalistów podchodzi do każdego zlecenia z największą starannością i zaangażowaniem, traktując stolarstwo nie tylko jako zawód, ale przede wszystkim jako pasję — przeprowadzając klienta przez cały proces, od projektu po realizację.</p>`,
     perks: [
-      { icon: "🎯", title: "Branża", desc: "Do uzupełnienia" },
-      { icon: "📍", title: "Lokalizacja", desc: "Do uzupełnienia" },
-      { icon: "🤝", title: "Współpraca od", desc: "Do uzupełnienia" },
-      { icon: "⭐", title: "Specjalizacja", desc: "Do uzupełnienia" },
+      { icon: "🎯", title: "Branża", desc: "Stolarstwo i meble na wymiar" },
+      { icon: "📍", title: "Lokalizacja", desc: "Ciółkówko" },
+      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "⭐", title: "Specjalizacja", desc: "Meble na zamówienie, CNC, lakierowanie" },
     ],
     contact: {
       email: "",
-      phone: "",
-      website: "",
-      address: "",
+      phone: "531-135-438",
+      website: "https://stolrys.com.pl/",
+      address: "Ciółkówko",
     },
-    social: { facebook: "", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
+    social: { facebook: "", instagram: "https://www.instagram.com/stolrys/", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
 ];
 
