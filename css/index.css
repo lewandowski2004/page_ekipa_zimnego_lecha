@@ -1089,6 +1089,15 @@
 
 .form-textarea { resize: vertical; min-height: 100px; }
 
+/* Honeypot — pole-pułapka na boty, niewidoczne dla ludzi */
+.form-honeypot {
+  position: absolute !important;
+  left: -9999px !important;
+  width: 1px; height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 
 .form-submit { margin-top: 8px; width: 100%; text-align: center; }

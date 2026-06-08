@@ -66,27 +66,62 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   });
 });
 
-// ── FORM SUBMIT ──────────────────────────────────────────────────────
-function setupForm(formId, successId) {
-  document.getElementById(formId).addEventListener('submit', function (e) {
+// ── FORM SUBMIT — wysyłka maila przez FormSubmit.co ─────────────────
+const FORM_TARGET_EMAIL = 'radek.lewandowski2004@gmail.com';
+const FORM_AJAX_ENDPOINT = `https://formsubmit.co/ajax/${FORM_TARGET_EMAIL}`;
+
+function setupForm(formId, successId, subject) {
+  const form = document.getElementById(formId);
+  if (!form) return;
+
+  form.addEventListener('submit', function (e) {
     e.preventDefault();
+
+    // Honeypot — jeśli pole-pułapka jest wypełnione, to bot. Cicho ignorujemy.
+    const honey = this.querySelector('input[name="_honey"]');
+    if (honey && honey.value) {
+      this.reset();
+      return;
+    }
+
     const btn = this.querySelector('button[type="submit"]');
+    const originalLabel = btn.textContent;
     btn.textContent = 'Wysyłanie…';
     btn.disabled = true;
 
-    setTimeout(() => {
-      this.reset();
-      btn.textContent = 'Wyślij zapytanie';
-      btn.disabled = false;
-      const success = document.getElementById(successId);
-      success.style.display = 'block';
-      setTimeout(() => { success.style.display = 'none'; }, 5000);
-    }, 1200);
+    // Zbierz dane ze wszystkich widocznych pól formularza
+    const data = { _subject: subject || 'Nowa wiadomość ze strony Ekipa Zimnego Lecha', _honey: '' };
+    this.querySelectorAll('input, select, textarea').forEach(field => {
+      if (!field.id || field.name === '_honey' || field.closest('[style*="display: none"]')) return;
+      const label = this.querySelector(`label[for="${field.id}"]`);
+      const key = label ? label.textContent.trim() : field.id;
+      if (field.value) data[key] = field.value;
+    });
+
+    fetch(FORM_AJAX_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data),
+    })
+      .then(res => {
+        if (!res.ok) throw new Error('Błąd wysyłki');
+        this.reset();
+        const success = document.getElementById(successId);
+        success.style.display = 'block';
+        setTimeout(() => { success.style.display = 'none'; }, 5000);
+      })
+      .catch(() => {
+        alert('Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie później lub napisz do nas bezpośrednio.');
+      })
+      .finally(() => {
+        btn.textContent = originalLabel;
+        btn.disabled = false;
+      });
   });
 }
 
-setupForm('sponsorForm', 'sponsorSuccess');
-setupForm('sparringForm', 'sparringSuccess');
+setupForm('sponsorForm', 'sponsorSuccess', 'Nowe zapytanie sponsorskie — Ekipa Zimnego Lecha');
+setupForm('sparringForm', 'sparringSuccess', 'Nowe zgłoszenie sparingu / wydarzenia — Ekipa Zimnego Lecha');
 
 // ── Dynamiczny formularz: Sparing / Turniej / Event / Inne ──────────
 const SR_CONFIG = {
@@ -146,9 +181,4 @@ function applySrType(type) {
 if (srType) {
   applySrType(srType.value);
   srType.addEventListener('change', () => applySrType(srType.value));
-
-  document.getElementById('sparringForm').addEventListener('submit', function () {
-    const btn = srBtn;
-    setTimeout(() => { btn.textContent = btn.dataset.label || 'Wyślij zgłoszenie'; }, 1300);
-  });
 }
