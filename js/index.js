@@ -66,9 +66,8 @@ document.querySelectorAll('.tab-btn').forEach(btn => {
   });
 });
 
-// ── FORM SUBMIT — wysyłka maila przez FormSubmit.co ─────────────────
-const FORM_TARGET_EMAIL = 'radek.lewandowski2004@gmail.com';
-const FORM_AJAX_ENDPOINT = `https://formsubmit.co/ajax/${FORM_TARGET_EMAIL}`;
+// ── FORM SUBMIT — wysyłka maila przez Formspree ─────────────────────
+const FORM_ENDPOINT = 'https://formspree.io/f/xnjydzva';
 
 function setupForm(formId, successId, subject) {
   const form = document.getElementById(formId);
@@ -78,7 +77,7 @@ function setupForm(formId, successId, subject) {
     e.preventDefault();
 
     // Honeypot — jeśli pole-pułapka jest wypełnione, to bot. Cicho ignorujemy.
-    const honey = this.querySelector('input[name="_honey"]');
+    const honey = this.querySelector('input[name="_gotcha"]');
     if (honey && honey.value) {
       this.reset();
       return;
@@ -90,9 +89,9 @@ function setupForm(formId, successId, subject) {
     btn.disabled = true;
 
     // Zbierz dane ze wszystkich widocznych pól formularza
-    const data = { _subject: subject || 'Nowa wiadomość ze strony Ekipa Zimnego Lecha', _honey: '' };
+    const data = { _subject: subject || 'Nowa wiadomość ze strony Ekipa Zimnego Lecha' };
     this.querySelectorAll('input, select, textarea').forEach(field => {
-      if (!field.id || field.name === '_honey' || field.closest('[style*="display: none"]')) return;
+      if (!field.id || field.name === '_gotcha' || field.closest('[style*="display: none"]')) return;
       const label = this.querySelector(`label[for="${field.id}"]`);
       const key = label ? label.textContent.trim() : field.id;
       if (field.value) data[key] = field.value;
@@ -100,46 +99,24 @@ function setupForm(formId, successId, subject) {
 
     const formEl = this;
 
-    // Klasyczny POST — działa zawsze (m.in. wyzwala jednorazową aktywację adresu e-mail w FormSubmit)
-    function fallbackClassicSubmit() {
-      const hidden = document.createElement('form');
-      hidden.method = 'POST';
-      hidden.action = `https://formsubmit.co/${FORM_TARGET_EMAIL}`;
-      hidden.style.display = 'none';
-      Object.entries(data).forEach(([key, val]) => {
-        const inp = document.createElement('input');
-        inp.type = 'hidden';
-        inp.name = key;
-        inp.value = val;
-        hidden.appendChild(inp);
-      });
-      const captcha = document.createElement('input');
-      captcha.type = 'hidden';
-      captcha.name = '_captcha';
-      captcha.value = 'false';
-      hidden.appendChild(captcha);
-      document.body.appendChild(hidden);
-      hidden.submit();
-    }
-
-    fetch(FORM_AJAX_ENDPOINT, {
+    fetch(FORM_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify(data),
     })
       .then(res => {
-        if (!res.ok) throw new Error('Błąd wysyłki AJAX');
+        if (!res.ok) throw new Error('Błąd wysyłki');
         formEl.reset();
         const success = document.getElementById(successId);
         success.style.display = 'block';
         setTimeout(() => { success.style.display = 'none'; }, 5000);
-        btn.textContent = originalLabel;
-        btn.disabled = false;
       })
       .catch(() => {
-        // AJAX może nie działać, dopóki adres e-mail nie zostanie jednorazowo aktywowany —
-        // w takim wypadku wysyłamy zgłoszenie klasyczną metodą (przeładowanie strony).
-        fallbackClassicSubmit();
+        alert('Wystąpił błąd podczas wysyłania zgłoszenia. Spróbuj ponownie później lub napisz do nas bezpośrednio.');
+      })
+      .finally(() => {
+        btn.textContent = originalLabel;
+        btn.disabled = false;
       });
   });
 }
