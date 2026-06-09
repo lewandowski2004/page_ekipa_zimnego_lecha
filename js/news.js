@@ -24,7 +24,7 @@ const NEWS = [
       <h3>Skład Ekipy</h3>
       <ul>
         <li>Marcin Jankowski</li>
-        <li>Luki Lakito</li>
+        <li>Dominik Przysocki</li>
         <li>Volodymyr Los</li>
         <li>Piotr Buczkowski</li>
         <li>Piotr Rakowski</li>
@@ -51,7 +51,7 @@ const NEWS = [
         <li>Młyn Przedpełce</li>
         <li>Instal-Pro</li>
         <li>DJ RAVI — Mirosław Kopyt</li>
-        <li>STOLRYŚ — Ryszard Suminski</li>
+        <li>STOLRYŚ — Ryszard Sumiński</li>
       </ul>
       <p style="text-align:center;font-size:1.3em;margin-top:8px;">Dziękujemy 👏</p>
     `,
@@ -109,7 +109,7 @@ const NEWS = [
         <li><strong>Serwis i doradztwo</strong> — szybkie usuwanie awarii oraz doradztwo w doborze energooszczędnych rozwiązań</li>
       </ul>
       <p>Nie marnujemy czasu! Ta współpraca nie zaczyna się od obietnic, ale od <strong>konkretnego działania</strong>. Z pierwszym dniem wejścia do naszej sponsorskiej rodziny firma Instal-Pro rusza z pierwszym dużym projektem dedykowanym bezpośrednio naszym zawodnikom! Szczegóły tej wyjątkowej akcji ujawnimy już wkrótce, ale zapewniamy — to będzie potężny impuls rozwoju dla całej drużyny!</p>
-      <p>Dla nas to partnerstwo to dowód na to, że lokalny biznes i sport idą w jednej zgranej lidze — mimo że liga się kończy, ale wszystko przed nami! 😁⚽</p>
+      <p>Dla nas to partnerstwo to dowód na to, że lokalny biznes i sport idą w jednej zgranej lidze — choć sezon już za nami — wszystko przed nami! 😁⚽</p>
       <p>Wspólnie mierzymy wysoko i jesteśmy pewni, że ta współpraca przyniesie nam wielki sukces — zarówno na boisku, jak i poza nim! 🏆</p>
       <p>📧 <a href="mailto:instal.pro.plock@gmail.com" style="color:var(--orange);">instal.pro.plock@gmail.com</a></p>
       <p><strong>Łukasz Dymek i cała załoga Instal-Pro</strong> — witamy na pokładzie Ekipy Zimnego Lecha! ⛴️</p>
@@ -130,7 +130,7 @@ const NEWS = [
     heroImage: "grafika/aktualnosci/aktualnosci_nowy_sprzet_1.jpg",
     excerpt: "Podczas ostatniego treningu nasi zawodnicy otrzymali nowe spodnie dresowe marki JOMA. Od teraz Ekipa będzie prezentować się jeszcze lepiej i trenować w pełnym komforcie!",
     content: `
-      <p>Podczas ostatniego treningu nasi zawodnicy otrzymali <strong>nowe spodnie dresowe marki JOMA</strong>. Od teraz nasi zawodnicy będą prezentować się jeszcze lepiej i trenować w pełnym komforcie.</p>
+      <p>Podczas ostatniego treningu nasi zawodnicy otrzymali <strong>nowe spodnie dresowe marki JOMA</strong>. Od teraz będą mogli grać w pełnym komforcie i stylu.</p>
       <p>Serdecznie dziękujemy firmie <strong>MARK-GAZ</strong> za sfinansowanie zakupu — Wasze wsparcie jest dla nas nieocenione! ☺️🤝💪❤️</p>
       <p>Słowa uznania kierujemy również do firmy <strong>Whitepro Reklama</strong> za profesjonalne przygotowanie personalizacji, naniesienie logotypów sponsora oraz numerację spodni. Dziękujemy za profesjonalne logo Ekipy 🤝👍 Kawał dobrej roboty! 🦾 Z całego serca polecamy Was.</p>
       <p>Wybierając dostawy gazu stawiasz na bezpieczeństwo swojej rodziny. W <strong>MARK-GAZ</strong> dbają o to, by gaz trafił do Ciebie zawsze na czas i spełniał najwyższe normy jakości. Dołącz do grona zadowolonych klientów i poczuj różnicę!</p>

@@ -43,7 +43,7 @@ const SPONSORS = [
     logoEmoji: "🛡️",
     description: `<p>Firma Solidne Ubezpieczenia Elżbieta Jakubowska to biuro ubezpieczeniowe z siedzibą w Ciółkówku, które stawia na indywidualne podejście do klienta i realną pomoc w trudnych sytuacjach życiowych.</p>
       <p>Dom 🏠 Samochód 🚗 Rodzina 👫 Zdrowie 🩺</p>
-      <p>Wszystko, co dla Ciebie ważne, zasługuje na solidną ochronę. Nie czekaj, aż wydarzy się coś złego — bądź o krok przed nim z Solidne Ubezpieczenia Elżbieta Jakubowska.</p>`,
+      <p>Wszystko, co dla Ciebie ważne, zasługuje na solidną ochronę. Nie czekaj, aż wydarzy się coś złego — bądź o krok przed nim z firmą Solidne Ubezpieczenia Elżbieta Jakubowska.</p>`,
     perks: [
       { icon: "🎯", title: "Branża", desc: "Ubezpieczenia" },
       { icon: "📍", title: "Lokalizacja", desc: "Ciółkówko" },
@@ -176,7 +176,7 @@ const SPONSORS = [
   {
     id: 7,
     name: "Mobilna Wulkanizacja Płock 24h/7 Marcin Paradowski",
-    nameHighlight: "Transport",
+    nameHighlight: "Wulkanizacja",
     tagline: "Całodobowy serwis opon i mechanika z dojazdem do klienta",
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_paradowski_transport.jpg",
@@ -245,7 +245,7 @@ const SPONSORS = [
     logo: "grafika/sponsorzy/company_logo_dj_ravi.jpg",
     logoEmoji: "🎧",
     description: `<p>Wieloletnie doświadczenie, setki zagranych imprez i instynkt wyczuwania nastroju tłumu — to właśnie wyróżnia DJ Raviego na tle innych. Niezależnie od okazji, gwarantuje show, które zapadnie w pamięć.</p>
-      <p>Współpraca z profesjonalistą takim jak DJ. Ravi Mirosław Kopyt to gwarancja, że Twoje wydarzenie nabierze wyjątkowego charakteru i energii, która porwie gości na parkiet.</p>
+      <p>Współpraca z profesjonalistą takim jak DJ Ravi Mirosław Kopyt to gwarancja, że Twoje wydarzenie nabierze wyjątkowego charakteru i energii, która porwie gości na parkiet.</p>
       <p>Dobry DJ to nie tylko osoba odtwarzająca muzykę, ale przede wszystkim architekt nastroju, który potrafi płynnie łączyć utwory i dostosować playlistę do bieżących emocji na sali.</p>`,
     perks: [
       { icon: "🎯", title: "Branża", desc: "Oprawa muzyczna imprez" },

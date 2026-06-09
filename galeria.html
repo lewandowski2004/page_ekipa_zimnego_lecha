@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galeria — Ekipa Zimnego Lecha</title>
+  <link rel="icon" type="image/png" href="grafika/ekipa/logo_ekipa_zimnego_lecha.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="grafika/ekipa/logo_ekipa_zimnego_lecha.png" alt="Ekipa Zimnego Lecha" class="nav-logo-icon" />
+        <div class="nav-logo-text">
+          Ekipa Zimnego Lecha
+          <span>Amatorska Drużyna Piłkarska</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#news">Aktualności</a></li>
+        <li><a href="index.html#players">Zawodnicy</a></li>
+        <li><a href="index.html#schedule">Terminarz</a></li>
+        <li><a href="index.html#sponsors">Sponsorzy</a></li>
+        <li><a href="galeria.html" style="color:var(--orange);">Galeria</a></li>
+        <li><a href="index.html#contact">Kontakt</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html#news">Aktualności</a>
+      <a href="index.html#players">Zawodnicy</a>
+      <a href="index.html#schedule">Terminarz</a>
+      <a href="index.html#sponsors">Sponsorzy</a>
+      <a href="galeria.html">Galeria</a>
+      <a href="index.html#contact">Kontakt</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="gallery-hero">
+    <div class="container">
+      <span class="section-label">Wspomnienia</span>
+      <h2 class="section-title">Ga<span>leria</span></h2>
+      <p class="gallery-desc">Chwile z życia drużyny — mecze, treningi i spotkania poza boiskiem.</p>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <main>
+    <div class="container">
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- wypełniane przez js/gallery.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Zamknij">✕</button>
+    <div class="lb-img-wrap">
+      <button class="lb-btn lb-prev" onclick="lbPrev()" aria-label="Poprzednie">&#8592;</button>
+      <img id="lb-img" src="" alt="" />
+      <button class="lb-btn lb-next" onclick="lbNext()" aria-label="Następne">&#8594;</button>
+    </div>
+    <div class="lb-meta">
+      <div id="lb-caption"></div>
+      <div id="lb-date"></div>
+      <div id="lb-counter"></div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 <span>Ekipa Zimnego Lecha</span>. Wszelkie prawa zastrzeżone.</p>
+        <a href="index.html" style="font-size:13px;color:var(--gray);">← Strona główna</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/gallery.js"></script>
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function () {
+      this.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
+    });
+  </script>
+</body>
+</html>
