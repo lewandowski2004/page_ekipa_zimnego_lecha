@@ -1,0 +1,51 @@
+/* ═══════════════════════════════════════════════════════════════════
+   LIGA
+═══════════════════════════════════════════════════════════════════ */
+
+.liga-hero {
+  padding: 120px 0 48px; /* 72px nav + 48px odstęp */
+  text-align: center;
+}
+
+.liga-hero .section-title { margin-bottom: 8px; }
+
+.liga-desc {
+  color: var(--gray);
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .liga-hero { padding: 100px 0 32px; }
+}
+
+/* ── PLACEHOLDER ─────────────────────────────────────────────────── */
+.liga-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  padding: 60px 24px 100px;
+  color: var(--gray);
+}
+
+.liga-placeholder-icon {
+  font-size: 48px;
+  margin-bottom: 8px;
+}
+
+.liga-placeholder h3 {
+  font-family: var(--font-h);
+  font-size: 24px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.liga-placeholder p {
+  max-width: 480px;
+  font-size: 15px;
+  line-height: 1.7;
+}
