@@ -126,7 +126,7 @@ const SPONSORS = [
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_mark_gaz.jpg",
     logoEmoji: "🔥",
-    description: `<p>PPH Mark-Gaz to rodzinna firma z Płocka, która od ponad 25 lat dostarcza gaz propan klientom indywidualnym, firmom oraz gospodarstwom rolnym na terenie Płocka, Sierpca, Włocławka i okolic.</p>
+    description: `<p>PPH Mark-Gaz to rodzinna firma z Płocka, która od ponad 25 lat dostarcza gaz propan klientom indywidualnym, firmom oraz gospodarstwom rolnym w promieniu około 150 km od Płocka, a obszar działania jest na bieżąco poszerzany.</p>
       <p>Firma oferuje m.in. dostawy gazu butlowego do domów, dystrybucję LPG dla stacji paliw, propan przemysłowy dla biznesu, paliwo do wózków widłowych, wynajem przyczep oraz całodobową stację wagową. Klienci mogą liczyć na ekspresową dostawę — zwykle w ciągu około 45 minut — z elastycznym zamawianiem telefonicznie lub SMS-em.</p>
       <p>Mark-Gaz to gwarancja sprawdzonej jakości paliwa, terminowości i przejrzystych warunków współpracy — bez ukrytych kosztów.</p>`,
     perks: [
@@ -139,6 +139,7 @@ const SPONSORS = [
       email: "biuro@markgaz.pl",
       phone: "801 402 403",
       website: "https://markgaz.pl/",
+      website2: "https://gazdodomu.pl/",
       address: "ul. Stefana Banacha 10, 09-407 Płock",
     },
     social: { facebook: "https://www.facebook.com/PPHMARKGAZ", instagram: "", linkedin: "", youtube: "", tiktok: "", twitter: "" },
@@ -346,11 +347,12 @@ function render() {
     </div>`).join('');
 
   // Contact items
-  const { email, phone, website, address } = sponsor.contact;
+  const { email, phone, website, website2, address } = sponsor.contact;
   const contactItemsHTML = [
     email   ? `<div class="contact-item"><div class="contact-icon">📧</div><div><div class="contact-item-label">E-mail</div><div class="contact-item-value"><a href="mailto:${email}">${email}</a></div></div></div>` : '',
     phone   ? `<div class="contact-item"><div class="contact-icon">📞</div><div><div class="contact-item-label">Telefon</div><div class="contact-item-value"><a href="tel:${phone.replace(/\s/g,'')}">${phone}</a></div></div></div>` : '',
     website ? `<div class="contact-item"><div class="contact-icon">🌐</div><div><div class="contact-item-label">Strona WWW</div><div class="contact-item-value"><a href="${website}" target="_blank" rel="noopener">${website.replace(/https?:\/\//,'')}</a></div></div></div>` : '',
+    website2 ? `<div class="contact-item"><div class="contact-icon">🌐</div><div><div class="contact-item-label">Strona WWW</div><div class="contact-item-value"><a href="${website2}" target="_blank" rel="noopener">${website2.replace(/https?:\/\//,'')}</a></div></div></div>` : '',
     address ? `<div class="contact-item"><div class="contact-icon">📍</div><div><div class="contact-item-label">Adres</div><div class="contact-item-value">${address}</div></div></div>` : '',
   ].join('');
 
