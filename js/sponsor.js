@@ -47,7 +47,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Ubezpieczenia" },
       { icon: "📍", title: "Lokalizacja", desc: "Ciółkówko" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2024" },
       { icon: "⭐", title: "Specjalizacja", desc: "Dom, samochód, rodzina, zdrowie" },
     ],
     contact: {
@@ -76,7 +76,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Myjnie samoobsługowe" },
       { icon: "📍", title: "Lokalizacja", desc: "Płock, Sochaczew" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2023" },
       { icon: "⭐", title: "Specjalizacja", desc: "Mycie samochodów — czynne całą dobę" },
     ],
     contact: {
@@ -107,7 +107,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Szkolenia kierowców i operatorów" },
       { icon: "📍", title: "Lokalizacja", desc: "Płock, ul. Dobrzyńska 13/1" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2024" },
       { icon: "⭐", title: "Specjalizacja", desc: "Prawo jazdy kat. B, ADR, HDS, wózki widłowe" },
     ],
     contact: {
@@ -132,7 +132,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Dostawy gazu propan (LPG)" },
       { icon: "📍", title: "Lokalizacja", desc: "Płock (ul. Stefana Banacha 10)" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2023" },
       { icon: "⭐", title: "Specjalizacja", desc: "Gaz do domów, firm i gospodarstw rolnych" },
     ],
     contact: {
@@ -162,7 +162,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Transport, kruszywa, roboty ziemne" },
       { icon: "📍", title: "Lokalizacja", desc: "Rogozino k. Płocka" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2024" },
       { icon: "⭐", title: "Specjalizacja", desc: "Kruszywa, transport HDS, wykopy i niwelacja terenu" },
     ],
     contact: {
@@ -194,7 +194,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Wulkanizacja i mechanika mobilna" },
       { icon: "📍", title: "Lokalizacja", desc: "Nowe Boryszewo 98A k. Płocka" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2025" },
       { icon: "⭐", title: "Specjalizacja", desc: "Serwis opon 24/7 z dojazdem — auta, TIR-y, sprzęt rolniczy" },
     ],
     contact: {
@@ -225,7 +225,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Młynarstwo i przetwórstwo zbóż" },
       { icon: "📍", title: "Lokalizacja", desc: "Przedpełce, gm. Staroźreby" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2023" },
       { icon: "⭐", title: "Specjalizacja", desc: "Mąki pszenne, żytnie i orkiszowe, skup zbóż" },
     ],
     contact: {
@@ -250,7 +250,7 @@ const SPONSORS = [
     perks: [
       { icon: "🎯", title: "Branża", desc: "Oprawa muzyczna imprez" },
       { icon: "📍", title: "Lokalizacja", desc: "Ciółkowo" },
-      { icon: "🤝", title: "Współpraca od", desc: "2026" },
+      { icon: "🤝", title: "Współpraca od", desc: "2023" },
       { icon: "⭐", title: "Specjalizacja", desc: "DJ na imprezy i wydarzenia" },
     ],
     contact: {
