@@ -112,7 +112,7 @@ const SPONSORS = [
     ],
     contact: {
       email: "",
-      phone: "728 323 521",
+      phone: "602 507 745",
       website: "https://e-traker.pl/",
       address: "ul. Dobrzyńska 13/1, Płock",
     },
@@ -270,7 +270,7 @@ const SPONSORS = [
     tier: "Sponsor",
     logo: "grafika/sponsorzy/company_logo_stolrys.jpg",
     logoEmoji: "🪵",
-    description: `<p>Stolryś Usługi Stolarskie to firma z Ciółkówka, która od 30 lat działa w branży stolarskiej, tworząc meble dopasowane do indywidualnych potrzeb klientów z całej Polski i zagranicy.</p>
+    description: `<p>Stolryś Usługi Stolarskie to firma z Ciółkowa, która od 30 lat działa w branży stolarskiej, tworząc meble dopasowane do indywidualnych potrzeb klientów z całej Polski i zagranicy.</p>
       <p>W ofercie firmy znajdziesz m.in.:</p>
       <ul style="margin:0 0 0 20px; padding:0; line-height:1.8;">
         <li>Meble na zamówienie — do domu, biura, lokali usługowych i hoteli</li>
@@ -281,7 +281,7 @@ const SPONSORS = [
       <p>Zespół profesjonalistów podchodzi do każdego zlecenia z największą starannością i zaangażowaniem, traktując stolarstwo nie tylko jako zawód, ale przede wszystkim jako pasję — przeprowadzając klienta przez cały proces, od projektu po realizację.</p>`,
     perks: [
       { icon: "🎯", title: "Branża", desc: "Stolarstwo i meble na wymiar" },
-      { icon: "📍", title: "Lokalizacja", desc: "Ciółkówko" },
+      { icon: "📍", title: "Lokalizacja", desc: "Ciółkowo" },
       { icon: "🤝", title: "Współpraca od", desc: "2026" },
       { icon: "⭐", title: "Specjalizacja", desc: "Meble na zamówienie, CNC, lakierowanie" },
     ],
@@ -289,7 +289,7 @@ const SPONSORS = [
       email: "",
       phone: "531-135-438",
       website: "https://stolrys.com.pl/",
-      address: "Ciółkówko",
+      address: "Ciółkowo",
     },
     social: { facebook: "", instagram: "https://www.instagram.com/stolrys/", linkedin: "", youtube: "", tiktok: "", twitter: "" },
   },
