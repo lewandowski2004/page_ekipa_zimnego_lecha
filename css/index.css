@@ -753,6 +753,15 @@
 
 .cal-event-label { overflow: hidden; text-overflow: ellipsis; }
 
+.cal-event-time {
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .5px;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
 .cal-event-name {
   font-size: 11px;
   letter-spacing: .5px;
@@ -776,12 +785,14 @@
 .cal-event--sparing .cal-dot, .cal-dot.cal-event--sparing { background: #4DB6AC; }
 .cal-event--turniej .cal-dot, .cal-dot.cal-event--turniej { background: #FFD54F; }
 .cal-event--trening .cal-dot, .cal-dot.cal-event--trening { background: #81C784; }
+.cal-event--event .cal-dot, .cal-dot.cal-event--event { background: #B388FF; }
 .cal-event--inne    .cal-dot, .cal-dot.cal-event--inne    { background: var(--gray); }
 
 .cal-event--mecz    .cal-event-label { color: var(--orange); }
 .cal-event--sparing .cal-event-label { color: #4DB6AC; }
 .cal-event--turniej .cal-event-label { color: #FFD54F; }
 .cal-event--trening .cal-event-label { color: #81C784; }
+.cal-event--event .cal-event-label { color: #B388FF; }
 .cal-event--inne    .cal-event-label { color: var(--gray); }
 
 /* Tooltip */
@@ -845,6 +856,7 @@
 .cal-event--sparing.cal-tip-badge { background: rgba(77,182,172,.15); color: #4DB6AC; }
 .cal-event--turniej.cal-tip-badge { background: rgba(255,213,79,.15); color: #FFD54F; }
 .cal-event--trening.cal-tip-badge { background: rgba(129,199,132,.15); color: #81C784; }
+.cal-event--event.cal-tip-badge { background: rgba(179,136,255,.15); color: #B388FF; }
 .cal-event--inne.cal-tip-badge    { background: rgba(136,136,136,.15); color: var(--gray); }
 
 .cal-tip-name {
@@ -936,6 +948,7 @@
 .cal-event--sparing .cal-agenda-day { color: #4DB6AC; }
 .cal-event--turniej .cal-agenda-day { color: #FFD54F; }
 .cal-event--trening .cal-agenda-day { color: #81C784; }
+.cal-event--event   .cal-agenda-day { color: #B388FF; }
 .cal-event--inne    .cal-agenda-day { color: var(--gray); }
 
 .cal-agenda-day {

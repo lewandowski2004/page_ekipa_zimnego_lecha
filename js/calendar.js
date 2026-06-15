@@ -1,16 +1,21 @@
 // ═══════════════════════════════════════════════════════════════════
 //  WYDARZENIA — dodaj / usuń / edytuj tutaj
-//  Typy: "mecz" | "sparing" | "turniej" | "trening" | "inne"
+//  Typy: "mecz" | "sparing" | "turniej" | "trening" | "event" | "inne"
 // ═══════════════════════════════════════════════════════════════════
 const EVENTS = [
-  { date: "2026-06-09", title: "Trening",  name: "",                        details: "", time: "", location: "Orlik Gulczewo", type: "trening" },
-  { date: "2026-06-27", title: "Mecz",     name: "50-lecie Huraganu Bodzanów", details: "", time: "", location: "Bodzanów",    type: "mecz" },
+  { date: "2026-06-02", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
+  { date: "2026-06-09", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
+  { date: "2026-06-16", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
+  { date: "2026-06-17", title: "Sparing",  name: "GKS Spójnia Mała Wieś",   details: "", time: "18:00", location: "Wyszogrodzka 23, 09-470 Bodzanów",    type: "sparing" },
+  { date: "2026-06-23", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
+  { date: "2026-06-27", title: "Event",    name: "50-lecie Huraganu Bodzanów", details: "", time: "10:00", location: "Wyszogrodzka 23, 09-470 Bodzanów",    type: "event" },
+  { date: "2026-06-30", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
 ];
 
 // ── STAŁE ───────────────────────────────────────────────────────────
 const MONTHS_PL = ["Styczeń","Luty","Marzec","Kwiecień","Maj","Czerwiec","Lipiec","Sierpień","Wrzesień","Październik","Listopad","Grudzień"];
 const DAYS_PL   = ["Pon","Wt","Śr","Czw","Pt","Sob","Ndz"];
-const TYPE_LABELS = { mecz:"Mecz", sparing:"Sparing", turniej:"Turniej", trening:"Trening", inne:"Inne" };
+const TYPE_LABELS = { mecz:"Mecz", sparing:"Sparing", turniej:"Turniej", trening:"Trening", event:"Event", inne:"Inne" };
 
 const YEAR = new Date().getFullYear();
 let calMonth = new Date().getMonth();
@@ -48,6 +53,7 @@ function renderCalendar() {
       <div class="cal-event-item cal-event--${ev.type}">
         <span class="cal-dot"></span>
         <span class="cal-event-label">${ev.title}</span>
+        ${ev.time ? `<span class="cal-event-time">🕐 ${ev.time}</span>` : ''}
       </div>
       ${ev.name ? `<div class="cal-event-name">${ev.name}</div>` : ''}`).join('');
 
@@ -116,6 +122,7 @@ function renderCalendar() {
       <span class="cal-leg"><span class="cal-dot cal-event--sparing"></span>Sparing</span>
       <span class="cal-leg"><span class="cal-dot cal-event--turniej"></span>Turniej</span>
       <span class="cal-leg"><span class="cal-dot cal-event--trening"></span>Trening</span>
+      <span class="cal-leg"><span class="cal-dot cal-event--event"></span>Event</span>
       <span class="cal-leg"><span class="cal-dot cal-event--inne"></span>Inne</span>
     </div>
   `;
