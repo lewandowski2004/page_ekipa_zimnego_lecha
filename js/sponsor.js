@@ -296,6 +296,17 @@ const SPONSORS = [
 ];
 
 // ══════════════════════════════════════════════════════════════════
+//  SPRZĘT Z LOGO SPONSORA — zdjęcia strojów/sprzętu z logo danej firmy
+// ══════════════════════════════════════════════════════════════════
+const GEAR_PHOTOS = [
+  { src: "grafika/ekipa/sprzet/bialy_stroj.jpg",              caption: "Strój meczowy - biały", sponsorIds: [3, 5] },
+  { src: "grafika/ekipa/sprzet/pomaranczowo_zielony_stroj.jpg", caption: "Strój meczowy - pomarańczowo-niebieski", sponsorIds: [2, 3, 4, 5, 6] },
+  { src: "grafika/ekipa/sprzet/bluza.jpg",                    caption: "Bluza zespołowa",     sponsorIds: [2, 3, 4, 8] },
+  { src: "grafika/ekipa/sprzet/dresy.jpg",                    caption: "Spodnie dresowe",     sponsorIds: [5] },
+  { src: "grafika/ekipa/sprzet/rekawice.jpg",                 caption: "Rękawice bramkarskie", sponsorIds: [10] },
+];
+
+// ══════════════════════════════════════════════════════════════════
 //  SOCIAL MEDIA CONFIG
 // ══════════════════════════════════════════════════════════════════
 const SOCIAL_META = {
@@ -366,6 +377,17 @@ function render() {
 
   const hasSocial = socialBtns.length > 0;
 
+  // Sprzęt z logo sponsora
+  const gearItems = GEAR_PHOTOS.filter(g => g.sponsorIds.includes(id));
+  currentGear = gearItems;
+  const gearHTML = gearItems.map((g, i) => `
+    <div class="gear-item fade-in" onclick="openGearLightbox(${i})">
+      <div class="gear-thumb">
+        <img src="${g.src}" alt="${g.caption} — logo ${sponsor.name}" loading="lazy" />
+      </div>
+      <div class="gear-caption">${g.caption}</div>
+    </div>`).join('');
+
   // Other sponsors
   const othersHTML = SPONSORS.map(s => `
     <a href="sponsor.html?id=${s.id}" class="other-card ${s.id === id ? 'current' : ''}">
@@ -430,6 +452,19 @@ function render() {
       </div>
     </section>
 
+    ${gearItems.length ? `
+    <!-- SPRZĘT Z LOGO -->
+    <section class="sponsor-gear">
+      <div class="container">
+        <div class="fade-in">
+          <h2 class="content-title">Wsparcie i <span>Zrealizowane Projekty</span></h2>
+        </div>
+        <div class="gear-grid">
+          ${gearHTML}
+        </div>
+      </div>
+    </section>` : ''}
+
     <!-- OTHER SPONSORS -->
     <section class="other-sponsors">
       <div class="container">
@@ -451,6 +486,41 @@ function render() {
     });
   }, 50);
 }
+
+// ── LIGHTBOX (sprzęt z logo) ──────────────────────────────────────
+let currentGear = [];
+let gearIndex = 0;
+
+function openGearLightbox(index) {
+  gearIndex = index;
+  const item = currentGear[index];
+  const lb = document.getElementById('lightbox');
+  document.getElementById('lb-img').src = item.src;
+  document.getElementById('lb-img').alt = item.caption;
+  document.getElementById('lb-caption').textContent = item.caption;
+  document.getElementById('lb-counter').textContent = `${index + 1} / ${currentGear.length}`;
+  lb.classList.add('lb-open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('lb-open');
+  document.body.style.overflow = '';
+}
+
+function lbPrev() { openGearLightbox((gearIndex - 1 + currentGear.length) % currentGear.length); }
+function lbNext() { openGearLightbox((gearIndex + 1) % currentGear.length); }
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('lightbox').classList.contains('lb-open')) return;
+  if (e.key === 'Escape')     closeLightbox();
+  if (e.key === 'ArrowLeft')  lbPrev();
+  if (e.key === 'ArrowRight') lbNext();
+});
+
+document.getElementById('lightbox').addEventListener('click', function (e) {
+  if (e.target === this) closeLightbox();
+});
 
 // ── HAMBURGER ─────────────────────────────────────────────────────
 document.getElementById('hamburger').addEventListener('click', function () {

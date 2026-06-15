@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/sponsor.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
 </head>
 <body>
 
@@ -48,6 +49,20 @@
 
   <!-- Dynamicznie wypełniane przez JS -->
   <div id="pageContent"></div>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Powiększone zdjęcie">
+    <button class="lb-close" onclick="closeLightbox()" aria-label="Zamknij">✕</button>
+    <div class="lb-img-wrap">
+      <button class="lb-btn lb-prev" onclick="lbPrev()" aria-label="Poprzednie">&#8592;</button>
+      <img id="lb-img" src="" alt="" />
+      <button class="lb-btn lb-next" onclick="lbNext()" aria-label="Następne">&#8594;</button>
+    </div>
+    <div class="lb-meta">
+      <div id="lb-caption"></div>
+      <div id="lb-counter"></div>
+    </div>
+  </div>
 
   <!-- FOOTER -->
   <footer class="footer">
