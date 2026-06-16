@@ -6,7 +6,7 @@ const EVENTS = [
   { date: "2026-06-02", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
   { date: "2026-06-09", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
   { date: "2026-06-16", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
-  { date: "2026-06-17", title: "Sparing",  name: "GKS Spójnia Mała Wieś",   details: "", time: "18:00", location: "Wyszogrodzka 23, 09-470 Bodzanów",    type: "sparing" },
+  { date: "2026-06-17", title: "Sparing",  name: "Oldboy Bodzanów",          details: "", time: "19:00", location: "Wyszogrodzka 23, 09-470 Bodzanów",    type: "sparing" },
   { date: "2026-06-23", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
   { date: "2026-06-27", title: "Event",    name: "50-lecie Huraganu Bodzanów", details: "", time: "10:00", location: "Wyszogrodzka 23, 09-470 Bodzanów",    type: "event" },
   { date: "2026-06-30", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
