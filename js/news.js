@@ -1,5 +1,55 @@
 const NEWS = [
   {
+    id: 6,
+    title: "Wygrywamy 10:2 z Oldboy Huragan Bodzanów!",
+    titleHighlight: "10:2",
+    category: "Sparing",
+    date: "2026-06-18",
+    dateDisplay: "18 czerwca 2026",
+    author: "Redakcja",
+    emoji: "⚽",
+    image: "grafika/aktualnosci/aktualnosci_sparing_oldBoy_bodzanow.jpg",
+    excerpt: "Wspaniałe, piłkarskie święto i pokaz sportowego ducha! Za nami wyjątkowy mecz towarzyski — zmierzyliśmy się z drużyną Oldboy Huragan Bodzanów w formule 2x35 minut. Wielkie brawa dla obu drużyn!",
+    content: `
+      <p>Wspaniałe, piłkarskie święto i pokaz sportowego ducha! Za nami wyjątkowy mecz towarzyski, w którym zmierzyliśmy się z drużyną Oldboy Huragan Bodzanów. Spotkanie rozegrane zostało w formule 2x35 minut. ⚽</p>
+      <p>Dla drużyny z Bodzanowa był to pierwszy występ na boisku — drużyna trenuje i przygotowuje się do nadchodzącego meczu jubileuszowego. Tym większy szacunek i ogromne brawa należą się zawodnikom z Bodzanowa za to, że podjęli wyzwanie, zechcieli zagrać i pokazali wielkie serce do walki!</p>
+      <p>W tym pojedynku wynik na tablicy miał drugorzędne znaczenie. Liczył się przede wszystkim wspólnie spędzony czas, integracja oraz promocja idei sportu i zasada fair play. Obie drużyny stworzyły świetne widowisko, które — co najważniejsze — zakończyło się bez żadnych kontuzji.</p>
+      <p>Gratulacje dla wszystkich zawodników Ekipy, którzy pojawili się tego dnia w Bodzanowie i zaprezentowali się na boisku, gratulacje dla strzelców bramek. ⚽ Podziękowania dla Klubu z Bodzanowa za gościnę 🏟️, dla kibiców, którzy przyszli na to spotkanie 👏, oraz dla naszych sponsorów.</p>
+      <h3>Skład Ekipy</h3>
+      <ul>
+        <li>Marcin Jankowski</li>
+        <li>Volodymyr Los</li>
+        <li>Mateusz Koszalski</li>
+        <li>Piotr Buczkowski</li>
+        <li>Waldemar Łuczak</li>
+        <li>Krystian Korpowski</li>
+        <li>Damian Strzelczak</li>
+        <li>Piotrek Koszalski</li>
+        <li>Adrian Wiśniewski</li>
+        <li>Radek Lewandowski</li>
+        <li>Piotr Rakowski</li>
+        <li>Bartek Borucki</li>
+        <li>Tomek Kapitan</li>
+        <li>Maciek Modliński</li>
+        <li>Dominik Przysocki</li>
+      </ul>
+      <h3>Podziękowania dla Sponsorów</h3>
+      <ul>
+        <li><a href="sponsor.html?id=5" style="color:var(--orange);">MARK-GAZ</a></li>
+        <li><a href="sponsor.html?id=3" style="color:var(--orange);">MON GAZ</a></li>
+        <li><a href="sponsor.html?id=4" style="color:var(--orange);">Traker</a></li>
+        <li><a href="sponsor.html?id=2" style="color:var(--orange);">Solidne Ubezpieczenia — Elżbieta Jakubowska</a></li>
+        <li><a href="sponsor.html?id=6" style="color:var(--orange);">Trans-Sprzęt-Handel Lewandowski</a></li>
+        <li><a href="sponsor.html?id=8" style="color:var(--orange);">Młyn Przedpełce</a></li>
+        <li><a href="sponsor.html?id=1" style="color:var(--orange);">Instal-Pro</a></li>
+        <li><a href="sponsor.html?id=7" style="color:var(--orange);">Wulkanizator Z Przypadku</a></li>
+        <li><a href="sponsor.html?id=9" style="color:var(--orange);">DJ Ravi — Mirosław Kopyt</a></li>
+        <li><a href="sponsor.html?id=10" style="color:var(--orange);">STOLRYŚ — Ryszard Sumiński</a></li>
+      </ul>
+      <p style="text-align:center;font-size:1.3em;margin-top:8px;">Dziękujemy 👏</p>
+    `,
+  },
+  {
     id: 5,
     title: "CO ZA MECZ! Wygrywamy festiwal strzelecki w Bodzanowie 8:4!",
     titleHighlight: "festiwal strzelecki",
