@@ -1,5 +1,28 @@
 const NEWS = [
   {
+    id: 7,
+    title: "Zimny prysznic w upalny dzień — sparing jubileuszowy 4:2 z Huragan Bodzanów",
+    titleHighlight: "4:2",
+    category: "Event",
+    date: "2026-06-27",
+    dateDisplay: "27 czerwca 2026",
+    author: "Redakcja",
+    emoji: "⚽",
+    image: "grafika/aktualnosci/aktualnosci_jubileusz_huragan_bodzanow.jpg",
+    excerpt: "Za nami wyjątkowe spotkanie jubileuszowe w Bodzanowie! W meczu z okazji 50-lecia Huraganu Bodzanów przegraliśmy 4:2, ale to był dzień pełen emocji, pięknych gestów i niesamowitej atmosfery.",
+    content: `
+      <p>Typowe, upalne lato powitało zawodników obu drużyn, którzy punktualnie stawili się na murawie w Bodzanowie.</p>
+      <p>Przed pierwszym gwizdkiem kibice i zawodnicy byli świadkami wyjątkowo miłej sytuacji. Prowadzący wydarzenie w niezwykle pięknych słowach opisał naszą Ekipę — słuchało się tego z ogromną dumą i wzruszeniem, za co z całego serca dziękujemy!</p>
+      <p>Następnie obie jedenastki wyszły na murawę, gdzie doszło do oficjalnego przywitania kapitanów i wymiany proporczyków. Ekipa Zimnego Lecha przekazała gospodarzom wyjątkowy prezent w postaci mundialowej piłki oraz oficjalne gratulacje.</p>
+      <p>Mecz został zaplanowany na dwie połowy po 30 minut, a z powodu lejącego się z nieba żaru sędzia zarządził dodatkowe przerwy na uzupełnienie płynów. Całe widowisko mogło się podobać licznie zgromadzonym kibicom.</p>
+      <p>Na boisku działo się mnóstwo — oglądaliśmy szybkie akcje, groźne sytuacje i strzały pod obiema bramkami. Niestety, to gospodarze jako pierwsi zadali dwa błyskawiczne ciosy, wychodząc na prowadzenie <strong>2:0</strong>. Oldboye Huraganu ewidentnie odrobiły lekcję po ostatnim sparingu. Ekipa natychmiast zmotywowała się do odrabiania strat. Choć początkowo brakowało skuteczności, to po przerwie na wodę ruszyła lawina naszych ataków. Efekt? Jeszcze przed przerwą zdobywamy dwie bramki i doprowadzamy do remisu <strong>2:2!</strong></p>
+      <p>Warto dodać, że w pierwszej połowie nasi niezawodni kibice stworzyli niesamowitą atmosferę, odpalając widowiskowe racowisko i głośno dopingując zespół.</p>
+      <p>Niestety, to nie był nasz dzień. Po zmianie stron konto bramkowe Ekipy pozostało bez zmian, natomiast zawodnicy z Bodzanowa zdołali dołożyć dwa kolejne trafienia. Przegrywamy to spotkanie <strong>4:2</strong> — serdecznie gratulujemy zwycięstwa w meczu, który uświetnił wspaniały jubileusz 50-lecia istnienia klubu.</p>
+      <p>Po końcowym gwizdku przyszedł czas na integrację. Zostaliśmy zaproszeni na pyszny poczęstunek, okolicznościowy tort oraz idealne na te upały zimne napoje. Kulisy przyniosły też bardzo ważne rozmowy — udało nam się porozmawiać z wiceprezesem klubu <strong>Konradem Zuchorą</strong>. Dziękujemy za zaproszenie i możliwość dalszego korzystania z obiektu. To dla nas ogromny zaszczyt — mimo że jesteśmy amatorską drużyną, zostaliśmy potraktowani jak w pełni profesjonalny zespół.</p>
+      <p>Dziękujemy wszystkim, którzy tego dnia byli z nami! Wyciągamy cenne wnioski z tej lekcji. Przed nami kluczowe przygotowania do sierpniowego Pucharu Polski — czeka nas ciężka praca na treningach i zapewne kilka meczów kontrolnych. <strong>DZIĘKUJEMY! 👏</strong></p>
+    `,
+  },
+  {
     id: 6,
     title: "Wygrywamy 10:2 z Oldboy Huragan Bodzanów!",
     titleHighlight: "10:2",
