@@ -1,5 +1,24 @@
 const NEWS = [
   {
+    id: 8,
+    title: "Sezon urlopowy trwa, ale Ekipa szykuje się do Pucharu Polski",
+    titleHighlight: "Pucharu Polski",
+    category: "Informacje",
+    date: "2026-07-27",
+    dateDisplay: "27 lipca 2026",
+    author: "Redakcja",
+    emoji: "💪",
+    image: "grafika/aktualnosci/aktualnosci_ekipa.png",
+    excerpt: "Urlopowy sezon w pełni, ale u nas beztroskiego wypoczynku nie ma! Treningi na Ciółkowie i Orliku ruszyły pełną parą — wszystko po to, by jak najlepiej przygotować się do sierpniowego Pucharu Polski MZPN.",
+    content: `
+      <p>Sezon urlopowy trwa — ale to nie znaczy, że Ekipa śpi.</p>
+      <p>Treningi na boisku w Ciółkowie oraz na Orliku ruszyły pełną parą. W każdy poniedziałek i środę wylewamy siódme poty, a motywacja w zespole sięga zenitu.</p>
+      <p>Wszystko po to, aby jak najlepiej przygotować się do nadchodzącego Pucharu Polski MZPN — cel jest prosty: chcemy pokazać się z jak najlepszej strony.</p>
+      <p>Z tego miejsca wysyłamy ogromne PIĄTKI i PODZIĘKOWANIA w kierunku klubu ULKS Ciółkowo za udostępnienie obiektu i możliwość korzystania z murawy. 🏟️</p>
+      <p>Dodamy, że swój domowy mecz pucharowy rozegramy <strong>9 sierpnia o godzinie 17:00</strong> właśnie na obiekcie w Ciółkowie.</p>
+    `,
+  },
+  {
     id: 7,
     title: "Zimny prysznic w upalny dzień — sparing jubileuszowy 4:2 z Huragan Bodzanów",
     titleHighlight: "4:2",
