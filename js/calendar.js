@@ -10,6 +10,26 @@ const EVENTS = [
   { date: "2026-06-23", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
   { date: "2026-06-27", title: "Event",    name: "50-lecie Huraganu Bodzanów", details: "", time: "14:00", location: "Wyszogrodzka 23, 09-470 Bodzanów",    type: "event" },
   { date: "2026-06-30", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo", type: "trening" },
+
+  { date: "2026-07-01", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-07-06", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-07-08", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-07-13", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-07-15", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-07-20", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-07-22", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-07-27", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-07-29", title: "Sparing",  name: "Drużyna Mistrzów",        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "sparing" },
+  { date: "2026-08-03", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-08-05", title: "Sparing",  name: "Spójnia Mała Wieś",       details: "", time: "18:00", location: "Mała Wieś", type: "sparing" },
+  { date: "2026-08-09", title: "Puchar Polski", name: "Orkan II Sochaczew", details: "", time: "17:00", location: "Boisko Ciółkowo", type: "mecz" },
+  { date: "2026-08-10", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-08-12", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-08-17", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-08-19", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-08-24", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-08-26", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-08-31", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
 ];
 
 // ── STAŁE ───────────────────────────────────────────────────────────
