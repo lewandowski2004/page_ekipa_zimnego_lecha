@@ -1,5 +1,51 @@
 const NEWS = [
   {
+    id: 9,
+    title: "Mamy to we krwi, walczymy do końca! Za nami mecz w Pucharze Polski",
+    titleHighlight: "Pucharze Polski",
+    category: "Mecz",
+    date: "2026-08-09",
+    dateDisplay: "9 sierpnia 2026",
+    author: "Redakcja",
+    emoji: "🏆",
+    image: "grafika/aktualnosci/aktualnosci_puchar_polski_2026.jpg",
+    excerpt: "Za nami mecz w Pucharze Polski! Nasza Ekipa Zimnego Lecha zmierzyła się z ligowym zespołem Orkan II Sochaczew. Wynik może na pierwszy rzut oka odstraszać, ale walczyliśmy do samego końca i strzeliliśmy bramkę honorową z rzutu karnego.",
+    content: `
+      <p>Za nami mecz w Pucharze Polski! Mamy to we krwi — walczymy do końca! ⚽🏆</p>
+      <p>W minioną niedzielę, 9 sierpnia, na boisku w Ciółkowie rozegraliśmy wyjątkowe spotkanie w ramach Pucharu Polski. Nasza Ekipa Zimnego Lecha podejmowała drużynę Orkan II Sochaczew.</p>
+      <p>Jako amatorska drużyna już drugi rok z rzędu mamy ogromny zaszczyt i przyjemność uczestniczyć w tych rozgrywkach. To dla nas niesamowita okazja, by zmierzyć się z zespołami, które trenują systematycznie kilka razy w tygodniu i na co dzień grają w rozgrywkach ligowych. Choć wynik <strong>1:9</strong> może na pierwszy rzut oka odstraszać, my dalej robimy swoje! To, co pokazaliśmy na boisku, zostaje z nami na zawsze, a każdy z nas zapisał się w historii klubu i rozgrywek. Wszyscy zawodnicy, którzy stawili się na meczu, wybiegli na murawę i dali z siebie absolutnie wszystko! 💪</p>
+      <h3>Jak wyglądało spotkanie?</h3>
+      <p>Z naszej strony to była walka, walka i jeszcze raz walka oraz ambitne próby ataków. Drużyna gości znalazła jednak na nas patent — powtarzali swoje akcje wielokrotnie, a my, nie wyciągając wniosków na bieżąco, popełnialiśmy błędy, które rywale bezlitośnie zamieniali na bramki.</p>
+      <h3>Moment, dla którego warto grać! 🎯</h3>
+      <p>Po jednej z naszych składnych akcji zawodnik z Sochaczewa zagrał ręką w polu karnym, a sędzia bez wahania wskazał na „wapno". Do piłki podszedł sam kapitan — pewnym strzałem pokonał bramkarza gości! 💥 Radość na trybunach i gromkie brawa!</p>
+      <p>„Dla takich momentów warto trenować i grać z taką Ekipą, przed takimi kibicami" — podsumował krótko Piotr Buczkowski.</p>
+      <img src="grafika/aktualnosci/puchar_polski_2026-1.jpg" alt="Mecz Pucharu Polski Ekipy Zimnego Lecha z Orkanem II Sochaczew" style="width:100%;border-radius:4px;object-fit:cover;margin:24px 0;" />
+      <p>Frekwencja przerosła nasze oczekiwania! Dziękujemy Wam za obecność na trybunach i wokół boiska, drodzy Kibice. Dziękujemy również naszym niezawodnym sponsorom za wsparcie, dzięki któremu możemy realizować swoje plany.</p>
+      <p>Dziękujemy i gratulujemy drużynie Orkana Sochaczew zasłużonego awansu i życzymy powodzenia w kolejnej rundzie. To kolejny ligowy zespół, który namawia nas, byśmy zgłosili się do ligi. 😄</p>
+      <h3>Skład Ekipy</h3>
+      <ul>
+        <li><strong>Bramkarze:</strong> Przemek Marcinkowski, Marcin Jankowski</li>
+        <li>Dominik Przysocki</li>
+        <li>Mateusz Koszalski</li>
+        <li>Krzysztof Stoparczyk</li>
+        <li>Piotr Buczkowski</li>
+        <li>Waldemar Łuczak</li>
+        <li>Damian Strzelczak</li>
+        <li>Piotrek Koszalski</li>
+        <li>Adrian Wiśniewski</li>
+        <li>Radek Lewandowski</li>
+        <li>Sebastian Góralski</li>
+        <li>Piotr Rakowski</li>
+        <li>Tomek Kapitan</li>
+        <li>Gabriel Herman</li>
+        <li>Bartek Borucki</li>
+        <li><strong>Kierownictwo:</strong> Dawid Brzeski, Volodymyr Los</li>
+      </ul>
+      <p>Warto dodać, że Volodymyr w szatni nie spodziewał się gromkiego „Sto lat" odśpiewanego przez całą Ekipę! 🎉 Wszystkiego najlepszego jeszcze raz!</p>
+      <p>Po meczu przyszedł czas na to, co buduje naszą drużynę najbardziej — wspólna analiza błędów, wyciąganie wniosków i wspólnie spędzony czas. Nie poddajemy się, wyciągamy lekcję i gramy dalej.</p>
+    `,
+  },
+  {
     id: 8,
     title: "Sezon urlopowy trwa, ale Ekipa szykuje się do Pucharu Polski",
     titleHighlight: "Pucharu Polski",
