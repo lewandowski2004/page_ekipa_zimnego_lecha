@@ -310,6 +310,25 @@ const SOCIAL_META = {
 // ══════════════════════════════════════════════════════════════════
 //  RENDER
 // ══════════════════════════════════════════════════════════════════
+function updateSponsorMeta(sponsor) {
+  const url = `https://ekipa-zimnego-lecha.pl/sponsor.html?id=${sponsor.id}`;
+  const description = `${sponsor.name} — ${sponsor.tagline}. Sponsor Ekipy Zimnego Lecha.`;
+  const image = sponsor.logo ? `https://ekipa-zimnego-lecha.pl/${sponsor.logo}` : 'https://ekipa-zimnego-lecha.pl/grafika/ekipa/baner1.jpg';
+  const setAttr = (id, attr, value) => {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute(attr, value);
+  };
+  setAttr('metaDescription', 'content', description);
+  setAttr('canonicalLink', 'href', url);
+  setAttr('ogUrl', 'content', url);
+  setAttr('ogTitle', 'content', `${sponsor.name} — Ekipa Zimnego Lecha`);
+  setAttr('ogDescription', 'content', description);
+  setAttr('ogImage', 'content', image);
+  setAttr('twitterTitle', 'content', `${sponsor.name} — Ekipa Zimnego Lecha`);
+  setAttr('twitterDescription', 'content', description);
+  setAttr('twitterImage', 'content', image);
+}
+
 function render() {
   const params = new URLSearchParams(window.location.search);
   const id = parseInt(params.get('id'), 10);
@@ -326,6 +345,7 @@ function render() {
   }
 
   document.title = `${sponsor.name} — Ekipa Zimnego Lecha`;
+  updateSponsorMeta(sponsor);
 
   // Split name for highlight
   const nameParts = sponsor.name.split(sponsor.nameHighlight);

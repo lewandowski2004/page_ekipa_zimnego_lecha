@@ -256,7 +256,7 @@ const NEWS = [
     `,
   },
   {
-    id: 6,
+    id: 10,
     title: "Nowy sprzęt dla naszych zawodników!",
     titleHighlight: "sprzęt",
     category: "Drużyna",
@@ -361,6 +361,25 @@ function renderNewsListing() {
 }
 
 // ─── ARTICLE PAGE (aktualnosc.html) ─────────────────────────────────
+function updateArticleMeta(news) {
+  const url = `https://ekipa-zimnego-lecha.pl/aktualnosc.html?id=${news.id}`;
+  const relImage = news.heroImage || news.image;
+  const image = relImage ? `https://ekipa-zimnego-lecha.pl/${relImage}` : 'https://ekipa-zimnego-lecha.pl/grafika/ekipa/baner1.jpg';
+  const setAttr = (id, attr, value) => {
+    const el = document.getElementById(id);
+    if (el) el.setAttribute(attr, value);
+  };
+  setAttr('metaDescription', 'content', news.excerpt);
+  setAttr('canonicalLink', 'href', url);
+  setAttr('ogUrl', 'content', url);
+  setAttr('ogTitle', 'content', `${news.title} — Ekipa Zimnego Lecha`);
+  setAttr('ogDescription', 'content', news.excerpt);
+  setAttr('ogImage', 'content', image);
+  setAttr('twitterTitle', 'content', `${news.title} — Ekipa Zimnego Lecha`);
+  setAttr('twitterDescription', 'content', news.excerpt);
+  setAttr('twitterImage', 'content', image);
+}
+
 function renderNewsArticle() {
   const wrap = document.getElementById('articleWrap');
   if (!wrap) return;
@@ -380,6 +399,7 @@ function renderNewsArticle() {
   }
 
   document.title = `${news.title} — Ekipa Zimnego Lecha`;
+  updateArticleMeta(news);
 
   const prev = NEWS[idx + 1];
   const next = NEWS[idx - 1];
