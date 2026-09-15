@@ -30,6 +30,28 @@ const EVENTS = [
   { date: "2026-08-24", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
   { date: "2026-08-26", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
   { date: "2026-08-31", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+
+  { date: "2026-09-01", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-09-02", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-09-08", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-09-09", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-09-15", title: "Sparing",  name: "",                        details: "", time: "18:00", location: "Orlik Gulczewo",  type: "sparing" },
+  { date: "2026-09-15", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-09-16", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-09-20", title: "Turniej",  name: "Turniej charytatywny drużyn piłki nożnej", details: "", time: "11:00", location: "Boisko sportowe w Nowych Łubkach", type: "turniej" },
+  { date: "2026-09-22", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-09-23", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-09-25", title: "Turniej",  name: "Memoriał im. Jerzego Feliciaka", details: "", time: "17:00", location: "Boisko w Radzanowie", type: "turniej" },
+  { date: "2026-09-29", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-09-30", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-10-06", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-10-07", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-10-13", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-10-14", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-10-20", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-10-21", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
+  { date: "2026-10-27", title: "Trening",  name: "",                        details: "", time: "19:30", location: "Orlik Gulczewo",  type: "trening" },
+  { date: "2026-10-28", title: "Trening",  name: "",                        details: "", time: "18:00", location: "Boisko Ciółkowo", type: "trening" },
 ];
 
 // ── STAŁE ───────────────────────────────────────────────────────────

@@ -1,0 +1,97 @@
+<title>Audyt SEO — british.edu.pl</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,sans-serif;max-width:900px;margin:0 auto;padding:40px 20px;line-height:1.6;color:#1a1a1a;}
+  h1{font-size:28px;border-bottom:3px solid #1a1a1a;padding-bottom:12px;}
+  h2{font-size:20px;margin-top:40px;padding:8px 12px;border-radius:6px;}
+  h2.crit{background:#fde2e1;color:#9b1c1c;}
+  h2.warn{background:#fef3c7;color:#92400e;}
+  h2.ok{background:#dcfce7;color:#166534;}
+  h2.info{background:#e0e7ff;color:#3730a3;}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px;}
+  th,td{text-align:left;padding:8px 10px;border-bottom:1px solid #e5e5e5;vertical-align:top;}
+  th{background:#f5f5f5;}
+  code{background:#f0f0f0;padding:1px 6px;border-radius:4px;font-size:13px;}
+  .tag{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600;}
+  .tag.high{background:#fde2e1;color:#9b1c1c;}
+  .tag.med{background:#fef3c7;color:#92400e;}
+  .tag.low{background:#e5e7eb;color:#374151;}
+  .summary{background:#f8f8f8;border-left:4px solid #1a1a1a;padding:16px 20px;margin:20px 0;}
+  ul{margin:6px 0;}
+  table{display:block;overflow-x:auto;}
+</style>
+
+<h1>Audyt SEO — british.edu.pl</h1>
+<p style="color:#666;">Szkoła językowa (Sochaczew / Łowicz / Płock), WordPress 7.0.2. Audyt oparty na analizie surowego HTML, nagłówków HTTP, robots.txt i sitemapy XML.</p>
+
+<div class="summary">
+<strong>W skrócie:</strong> strona ma poprawne podstawy techniczne (HTTPS, canonical, meta description, dane strukturalne), ale ma jeden poważny problem strukturalny — realne podstrony (Łowicz, Płock, Sochaczew) <strong>nie są w sitemapie</strong> — oraz kilka średnich niedociągnięć (duplikat H1, brak WebP, wyciek nazwy użytkownika WordPress).
+</div>
+
+<h2 class="crit">🔴 Krytyczne</h2>
+
+<table>
+<tr><th>Problem</th><th>Szczegóły</th></tr>
+<tr>
+  <td><span class="tag high">Wysoki</span> Podstrony lokalizacji brakują w sitemapie</td>
+  <td>Strona ma osobne, dobrze zoptymalizowane podstrony: <code>/sochaczew/</code>, <code>/lowicz/</code>, <code>/plock/</code> (własny title, meta description, canonical). Ale <code>wp-sitemap.xml</code> zawiera tylko <strong>3 adresy</strong>: stronę główną, politykę prywatności i cookies. Te podstrony w ogóle nie są zgłoszone do indeksacji przez sitemapę — Google może je znaleźć tylko przez linki wewnętrzne, co spowalnia i utrudnia indeksację, szczególnie szkodliwe dla local SEO (3 różne miasta = 3 szanse na lokalne zapytania).</td>
+</tr>
+<tr>
+  <td><span class="tag high">Wysoki</span> Podwójny <code>&lt;h1&gt;</code> na podstronach</td>
+  <td>Np. <code>/lowicz/</code> ma dwa tagi <code>&lt;h1&gt;</code> na stronie. Strona powinna mieć dokładnie jeden — dezorientuje to crawlery co do głównego tematu strony.</td>
+</tr>
+</table>
+
+<h2 class="warn">🟡 Średni priorytet</h2>
+
+<table>
+<tr><th>Problem</th><th>Szczegóły</th></tr>
+<tr>
+  <td>Brak Twitter Card</td>
+  <td>Są tagi Open Graph (<code>og:title</code>, <code>og:description</code>, <code>og:image</code>), ale brak <code>twitter:card</code> itd. — na X/Twitter link wyświetli się bez podglądu.</td>
+</tr>
+<tr>
+  <td>Błędne dane strukturalne (JSON-LD)</td>
+  <td>Strona główna oznaczona jako <code>@type: Article</code> zamiast np. <code>WebPage</code>/<code>EducationalOrganization</code> — semantycznie niepoprawne dla strony głównej szkoły. Pole <code>headline</code> to dosłownie <code>"Strona główna"</code>, a <code>description</code> to nieuporządkowany zlepek tekstu ze strony (efekt automatycznego generowania przez wtyczkę). <code>Organization.sameAs</code> jest puste — brak linków do Facebooka/Instagrama w danych strukturalnych, mimo że to typowa szkoła językowa, która pewnie ma social media.</td>
+</tr>
+<tr>
+  <td>Zero obrazów w WebP</td>
+  <td>18 obrazów rastrowych na stronie głównej, wszystkie PNG/JPG, żaden w WebP/AVIF. To bezpośrednio wpływa na Core Web Vitals (LCP), a te są sygnałem rankingowym Google.</td>
+</tr>
+<tr>
+  <td>Ciężki HTML strony głównej</td>
+  <td>Sam HTML (bez obrazów/CSS/JS) waży ok. <strong>412 KB</strong> — bardzo dużo jak na pojedynczą stronę. Wskazuje na page builder generujący dużo inline'owego markupu/stylów, co spowalnia parsowanie i pierwsze renderowanie.</td>
+</tr>
+<tr>
+  <td>Wyciek nazwy użytkownika WordPress</td>
+  <td><code>wp-sitemap-users-1.xml</code> ujawnia <code>/author/admin/</code> — użytkownik nazywa się dosłownie <code>admin</code>. To nie jest ściśle SEO, ale realne ryzyko bezpieczeństwa (klasyczny cel ataków brute-force na <code>/wp-login.php</code>). Warto zmienić nazwę użytkownika i wyłączyć sitemapę autorów (nie jest potrzebna dla strony firmowej).</td>
+</tr>
+<tr>
+  <td>12 z 14 obrazów z pustym <code>alt=""</code></td>
+  <td>Tylko 2 obrazy na stronie głównej mają brakujący atrybut <code>alt</code> całkowicie, ale aż 12 ma go pusty (<code>alt=""</code>) — dla obrazów dekoracyjnych to OK, ale jeśli wśród nich są zdjęcia lekcji/uczniów/wnętrz szkoły, tracisz szansę na ranking w Google Grafika i pogarszasz dostępność.</td>
+</tr>
+</table>
+
+<h2 class="ok">🟢 Co jest zrobione dobrze</h2>
+<ul>
+  <li>HTTPS wymuszony poprawnie (HTTP → HTTPS 301, <code>www</code> → bez <code>www</code> 301) — brak duplikacji pod różnymi wariantami URL</li>
+  <li><code>title</code>, <code>meta description</code>, <code>canonical</code> obecne i sensowne treściowo na stronie głównej i podstronach lokalizacji</li>
+  <li>Open Graph (title/description/image/url) obecny</li>
+  <li><code>robots.txt</code> poprawny, wskazuje na sitemapę</li>
+  <li><code>lang="pl-PL"</code> ustawiony prawidłowo</li>
+  <li>Dane strukturalne <code>WebSite</code> z <code>SearchAction</code> (potencjalny sitelinks searchbox)</li>
+  <li>Brak mixed content (wszystkie zasoby ładowane po HTTPS)</li>
+  <li>Realna architektura z osobnymi stronami lokalizacji (dobry pomysł na local SEO — tylko trzeba go dokończyć, patrz wyżej)</li>
+</ul>
+
+<h2 class="info">📋 Rekomendowane działania (wg priorytetu)</h2>
+<ol>
+  <li>Sprawdzić w ustawieniach WordPress/wtyczki SEO, dlaczego <code>/sochaczew/</code>, <code>/lowicz/</code>, <code>/plock/</code> i strony <code>bezplatne-zaproszenie</code> nie trafiają do <code>wp-sitemap.xml</code> — prawdopodobnie zły typ treści (custom post type) lub błędna konfiguracja. Dodać je do sitemapy.</li>
+  <li>Usunąć duplikat <code>&lt;h1&gt;</code> na podstronach lokalizacji.</li>
+  <li>Dodać brakujące tagi <code>twitter:card</code>.</li>
+  <li>Poprawić schema strony głównej: zmienić <code>Article</code> na coś sensownego (np. <code>WebPage</code> + <code>EducationalOrganization</code>/<code>LocalBusiness</code> z adresami trzech placówek), uzupełnić <code>sameAs</code> o social media.</li>
+  <li>Skonwertować obrazy do WebP/AVIF (wtyczka typu ShortPixel/Imagify albo ręcznie).</li>
+  <li>Zmienić nazwę użytkownika WordPress z <code>admin</code> i wyłączyć/ukryć sitemapę autorów.</li>
+  <li>Uzupełnić <code>alt</code> na zdjęciach przedstawiających realne treści (zajęcia, wnętrza, uczniów).</li>
+</ol>
+
+<p style="color:#999;font-size:13px;margin-top:40px;">Audyt nie obejmuje: rzeczywistych Core Web Vitals (wymaga PageSpeed Insights/Lighthouse), statusu indeksacji w Google Search Console, ani analizy backlinków — to dane dostępne tylko właścicielowi strony.</p>
