@@ -1,5 +1,64 @@
 const NEWS = [
   {
+    id: 10,
+    title: "Mamy TO! Ekipa Zimnego Lecha na podium turnieju charytatywnego w Nowych Łubkach",
+    titleHighlight: "na podium",
+    category: "Turniej",
+    date: "2026-09-20",
+    dateDisplay: "20 września 2026",
+    author: "Redakcja",
+    emoji: "🥉",
+    image: "grafika/aktualnosci/turniej_lubki_2026.png",
+    excerpt: "W minioną niedzielę wzięliśmy udział w turnieju charytatywnym OSP Nowe Łubki. Po zaciętej rywalizacji w gronie 10 drużyn wywalczyliśmy 3. miejsce, a Bartek Borucki został Najlepszym Strzelcem Turnieju!",
+    content: `
+      <p>Mamy TO! 🥉 Ekipa Zimnego Lecha na podium w Nowych Łubkach!</p>
+      <p>W minioną niedzielę zameldowaliśmy się na turnieju charytatywnym organizowanym przez OSP Nowe Łubki. Cel był szczytny, a rywalizacja niezwykle zacięta — do walki stanęło 10 drużyn, które rywalizowały w dwóch grupach na dwóch równoległych boiskach. Murawa była bezwzględna i nie wybaczała najmniejszych błędów.</p>
+      <h3>⚽ Faza grupowa (grupa A)</h3>
+      <p>Losowanie przydzieliło nas do grupy A. Od samego początku musieliśmy wspiąć się na wyżyny swoich umiejętności. Nasza przeprawa wyglądała następująco:</p>
+      <ul>
+        <li>OSP Woźniki – Ekipa Zimnego Lecha 1:2 (świetne otwarcie turnieju)</li>
+        <li>Ekipa Zimnego Lecha – Drużyna Mistrzów 0:0 (mecz przyjaźni)</li>
+        <li>Zjednoczeni Bulkowo – Ekipa Zimnego Lecha 0:0</li>
+        <li>Ekipa Zimnego Lecha – FC Huragan 3:0 (pewne przypieczętowanie awansu)</li>
+      </ul>
+      <p>Z bilansem dwóch wygranych i dwóch remisów wychodzimy z grupy z 1. miejsca!</p>
+      <h3>🔥 Półfinał: dramat w bramce i loteria rzutów karnych</h3>
+      <p>W walce o finał trafiamy na wymagający zespół Orlik Maszewo. Od pierwszych minut mecz toczy się pod znakiem pełnego skupienia i licznych ataków na bramkę przeciwnika. Pierwsza połowa kończy się bezbramkowo.</p>
+      <p>Po zmianie stron dochodzi jednak do dramatycznego momentu — groźnego urazu kolana doznaje nasz bramkarz, Oliwier Majchrzak (Oliwier, wracaj szybko do zdrowia!). W tym miejscu ukłon dla drużyny z Maszewa oraz organizatorów — wykazali się wielką klasą i duchem fair play, pozwalając, aby nasz zawodnik grający tego dnia w innych barwach mógł awaryjnie wskoczyć między słupki i dokończyć z nami turniej.</p>
+      <p>Po regulaminowym czasie gry mamy 0:0. O wszystkim zdecydowały rzuty karne — pierwsza trójka strzela bezbłędnie, a w bramce Mateusz Koszalski daje z siebie absolutnie wszystko, broniąc dwa karne! Niestety finalnie przegrywamy w serii jedenastek, co zamyka nam drogę do finału.</p>
+      <h3>🥉 Mecz o 3. miejsce</h3>
+      <p>Do meczu pocieszenia z Oldboy Staroźreby podeszliśmy z chłodnymi głowami i pełnym spokojem. To był świetny mecz dla oka — dużo składnej gry, piłkarskiej jakości i bramek. Pokonujemy Oldboy Staroźreby 3:0 i zgarniamy 3. miejsce w całym turnieju!</p>
+      <h3>🏆 Nagroda indywidualna</h3>
+      <p>Żeby tego było mało, statuetka Najlepszego Strzelca Turnieju trafia w ręce naszego zawodnika — Bartka Boruckiego! Wielkie brawa!</p>
+      <h3>Skład Ekipy na turniej</h3>
+      <ul>
+        <li>Oliwier Majchrzak</li>
+        <li>Piotr Rakowski</li>
+        <li>Piotrek Koszalski</li>
+        <li>Mateusz Koszalski</li>
+        <li>Damian Strzelczak</li>
+        <li>Piotr Buczkowski</li>
+        <li>Bartek Borucki</li>
+        <li>Sebastian Góralski</li>
+      </ul>
+      <p>Ogromne podziękowania kierujemy do naszych niezawodnych kibiców — Martyny i Klaudii, dzięki za fotorelację z turnieju!</p>
+      <p>W całym tym sportowym szaleństwie najważniejszy był cel tego turnieju. Mamy nadzieję, że jako Ekipa dołożyliśmy swoją cegiełkę do całej akcji. A na koniec, żartobliwie: trzecie miejsca po prostu nas lubią, więc... MAMY TO! Standardowo meldujemy się na pudle!</p>
+      <h3>Podziękowania dla naszych niezawodnych sponsorów 🫶💪</h3>
+      <ul>
+        <li><a href="sponsor.html?id=5" style="color:var(--orange);">MARK-GAZ</a></li>
+        <li><a href="sponsor.html?id=7" style="color:var(--orange);">Wulkanizator Z Przypadku</a></li>
+        <li><a href="sponsor.html?id=2" style="color:var(--orange);">Solidne Ubezpieczenia — Elżbieta Jakubowska</a></li>
+        <li><a href="sponsor.html?id=6" style="color:var(--orange);">Trans-Sprzęt-Handel Lewandowski</a></li>
+        <li><a href="sponsor.html?id=3" style="color:var(--orange);">MON GAZ</a></li>
+        <li><a href="sponsor.html?id=4" style="color:var(--orange);">Traker</a></li>
+        <li><a href="sponsor.html?id=8" style="color:var(--orange);">Młyn Przedpełce</a></li>
+        <li><a href="sponsor.html?id=1" style="color:var(--orange);">Instal-Pro</a></li>
+        <li><a href="sponsor.html?id=9" style="color:var(--orange);">DJ Ravi — Mirosław Kopyt</a></li>
+        <li><a href="sponsor.html?id=10" style="color:var(--orange);">STOLRYŚ — Ryszard Sumiński</a></li>
+      </ul>
+    `,
+  },
+  {
     id: 9,
     title: "Mamy to we krwi, walczymy do końca! Za nami mecz w Pucharze Polski",
     titleHighlight: "Pucharze Polski",
